@@ -1,6 +1,6 @@
 ---
 title: "Higher-Order Improvements of the Parametric Bootstrap for Long-Memory Gaussian Processes"
-authors: "Andrews, DWK, Lieberman, O, and Marmer, V"
+author: "Andrews, DWK, Lieberman, O, and Marmer, V"
 collection: publications
 permalink: /publication/2006-higher-order
 #excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
