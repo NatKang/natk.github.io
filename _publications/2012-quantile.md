@@ -14,3 +14,7 @@ Marmer, V., & Shneyerov, A. (2012). &ldquo;Quantile-based nonparametric inferenc
 - [Working Paper version](/files/auc-pdf_31.pdf)
 - [Supplement](/files/auc-pdf-suppl-11.pdf)
 - [Matlab code](/files/auc-pdf_codes_and_paper.zip)
+
+### Abstract 
+
+We propose a quantile-based nonparametric approach to inference on the probability density function (PDF) of the private values in first-price sealed-bid auctions with independent private values. Our method of inference is based on a fully nonparametric kernel-based estimator of the quantiles and PDF of observable bids. Our estimator attains the optimal rate of Guerre et al. (2000), and is also asymptotically normal with an appropriate choice of the bandwidth.
