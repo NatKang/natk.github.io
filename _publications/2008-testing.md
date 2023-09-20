@@ -1,9 +1,9 @@
 ---
-title: "Testing the Hypothesis of No Regime Switching with an Application to GDP Growth Rates"
+title: "Testing the null Hypothesis of No Regime Switching with an Application to GDP Growth Rates"
 collection: publications
 permalink: /publication/2008-testing
 #excerpt: 'This paper is about the number 2. The number 2 is left for future work.'
-date: 2008-01-01
+date: 2008-10-01
 venue: 'Empirical Economics'
 paperurl: 'https://link.springer.com/article/10.1007/s00181-007-0145-2'
 #citation: ''
