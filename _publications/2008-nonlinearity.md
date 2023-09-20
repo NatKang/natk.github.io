@@ -11,4 +11,5 @@ paperurl: 'https://doi.org/10.1016/j.jeconom.2007.03.002'
 ---
 Marmer, V. (2008). &ldquo;Nonlinearity, nonstationarity, and spurious forecasts.&rdquo; <i>Journal of  Econometrics</i>, 142, 1-27.
 
-[Working paper version](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3824487)
+- [Working paper version](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3824487)
+- [Published version](https://doi.org/10.1016/j.jeconom.2007.03.002)
