@@ -13,3 +13,7 @@ Andrews, D.W.K., & Marmer, V. (2008). &ldquo;Exactly Distribution-Free Inference
 
 - [Cowles Foundation Discussion Paper version](https://elischolar.library.yale.edu/cowles-discussion-paper-series/1783)
 - [Published version](https://doi.org/10.1016/j.jeconom.2007.05.012)
+
+### Abstract
+
+This paper introduces a rank-based test for the instrumental variables regression model that dominates the Anderson–Rubin test in terms of finite sample size and asymptotic power in certain circumstances. The test has correct size for any distribution of the errors with weak or strong instruments. The test has noticeably higher power than the Anderson–Rubin test when the error distribution has thick tails and comparable power otherwise. Like the Anderson–Rubin test, the rank tests considered here perform best, relative to other available tests, in exactly identified models.
