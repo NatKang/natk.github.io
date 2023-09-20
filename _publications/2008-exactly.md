@@ -3,7 +3,7 @@ title: "Exactly Distribution-Free Inference in Instrumental Variables Regression
 collection: publications
 permalink: /publication/2008-exactly
 #excerpt: 'This paper is about the number 2. The number 2 is left for future work.'
-date: 2008-01-01
+date: 2008-01-02
 venue: 'Journal of Econometrics'
 paperurl: 'https://doi.org/10.1016/j.jeconom.2007.05.012'
 #citation: ''
