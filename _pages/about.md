@@ -10,7 +10,14 @@ redirect_from:
 
 I am a professor of economics at the [Vancouver School of Economics](https://economics.ubc.ca) at the [University of British Columbia](https://www.ubc.ca). 
 
-I came to UBC in 2005 after completing my Ph.D. at Yale University. My main area of research is econometrics, where I have been working on topics such as estimation and inference for auctions, weak identification, misspecification, non-stationary time series, and inference with network-dependent data.
+I came to UBC in 2005 after completing my Ph.D. at Yale University. My main area of research is econometrics, where I have been working on  estimation and inference for auctions, weak identification, misspecification, non-stationary time series, and inference with network-dependent data.
+
+# Some recent publications
+
+- [Modeling Long Cycles](https://arxiv.org/abs/2010.13877) (with Natasha Kang), *Journal of Econometrics* (accepted)
+- [Inference on Individual Treatment Effects in Nonseparable Triangular Models](https://doi.org/10.1016/j.jeconom.2023.02.011) (with Jun Ma and Zhengfei Yu), *Journal of Econometrics*, 2023 [Working paper version](https://arxiv.org/abs/2107.05559)
+- [Limit Theorems for Network Dependent Random Variables](https://doi.org/10.1016/j.jeconom.2020.05.019) (with Denis Kojevnikov and Kevin Song), *Journal of Econometrics*, 2021 [Working paper version](https://arxiv.org/abs/1903.01059) 
+- [Inference for first-price auctions with Guerre, Perrigne, and Vuong's estimator](https://doi.org/10.1016/j.jeconom.2019.02.006) (with Jun Ma and Artyom Shneyerov), *Journal of Econometrics*, 2019 [Working paper version] (https://arxiv.org/abs/1903.06401)
 
 <!-- This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
 
