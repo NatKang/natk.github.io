@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Vadim Marmer"
+title                    : "[Vadim Marmer](https://economics.ubc.ca/profile/vadim-marmer/)"
 title_separator          : "-"
 name                     : &name "Vadim Marmer"
 description              : &description "personal description"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Vadim Marmer"
   avatar           : "profile.png"
-  bio              : "Professor  Vancouver School of Economics  University of British Columbia"
+  bio              : "Professor<br>  [Vancouver School of Economics](https://economics.ubc.ca)<br>  University of British Columbia"
   location         : "Location"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
