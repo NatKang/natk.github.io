@@ -1,9 +1,9 @@
 ---
 title: "Higher-order improvements of the parametric bootstrap for long-memory Gaussian processes"
 collection: publications
-permalink: /publication/2006-higher-order
+#permalink: /publication/2006-higher-order
 #excerpt: 'This paper is about the number 2. The number 2 is left for future work.'
-date: 2009-10-01
+date: 2006
 venue: 'Journal of Econometrics'
 paperurl: 'http://academicpages.github.io/files/paper1.pdf'
 #citation: ''
