@@ -6,9 +6,9 @@ permalink: /publication/2006-higher-order
 date: 2006
 venue: 'Journal of Econometrics'
 paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Andrews, D. W., Lieberman, O., & Marmer, V. (2006). Higher-order improvements of the parametric bootstrap for long-memory Gaussian processes. <i>Journal of Econometrics</i>, 133(2), 673-702.'
+#citation: 'Andrews, D. W., Lieberman, O., & Marmer, V. (2006). Higher-order improvements of the parametric bootstrap for long-memory Gaussian processes. <i>Journal of Econometrics</i>, 133(2), 673-702.'
 ---
-This paper is about the number 1. The number 2 is left for future work.
+This paper is about the number 2. The number 2 is left for future work.
 
 [Download paper here](http://academicpages.github.io/files/paper1.pdf)
 
