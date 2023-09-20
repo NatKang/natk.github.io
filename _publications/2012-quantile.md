@@ -11,8 +11,6 @@ paperurl: 'https://doi.org/10.1016/j.jeconom.2011.09.020'
 ---
 Marmer, V., & Shneyerov, A. (2012). &ldquo;Quantile-based nonparametric inference for first-price auctions.&rdquo; <i>Journal of  Econometrics</i>, 167, 345-357.
 
-[Working Paper version](/files/auc-pdf_31.pdf)
-
-[Supplement](/files/auc-pdf-suppl-11.pdf)
-
-[Matlab code](/files/auc-pdf_codes_and_paper.zip)
+- [Working Paper version](/files/auc-pdf_31.pdf)
+- [Supplement](/files/auc-pdf-suppl-11.pdf)
+- [Matlab code](/files/auc-pdf_codes_and_paper.zip)
