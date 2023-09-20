@@ -82,12 +82,13 @@ analytics:
 author:
   name             : "Vadim Marmer"
   avatar           : "vadim_marmer.jpg"
-  bio              : "Professor<br> Vancouver School of Economics<br>  University of British Columbia"
+  bio              : "Professor of Economics"
   location         : 
-  employer         :
+  employer         : "Vancouver School of Economics<br>  University of British Columbia"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=L_EMOyQAAAAJ&hl=en"
-  email            :
+  email            : "vadim.marmer@ubc.ca"
+  email            : "vadim.marmer@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -103,7 +104,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "https://orcid.org/0000-0001-9483-1152"
+  orcid            : #"https://orcid.org/0000-0001-9483-1152"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
