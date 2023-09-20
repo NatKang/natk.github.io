@@ -11,4 +11,4 @@ paperurl: 'https://doi.org/10.1016/j.jeconom.2007.05.012'
 ---
 Andrews, D.W.K., & Marmer, V. (2008). &ldquo;Exactly Distribution-Free Inference in Instrumental Variables Regression with Possibly Weak Instruments.&rdquo; <i>Journal of  Econometrics</i>, 142, 183-200.
 
-[Cowles Foundation Discussion Paper](https://elischolar.library.yale.edu/cgi/viewcontent.cgi?article=2782&context=cowles-discussion-paper-series)
+[Cowles Foundation Discussion Paper](https://elischolar.library.yale.edu/cowles-discussion-paper-series/1783)
