@@ -20,6 +20,11 @@ I came to UBC in 2005 after completing my Ph.D. at Yale University. My main area
 - [Limit Theorems for Network Dependent Random Variables](https://doi.org/10.1016/j.jeconom.2020.05.019) (with Denis Kojevnikov and Kevin Song)<br> *Journal of Econometrics*, 2021 [WP](https://arxiv.org/pdf/1903.01059.pdf) 
 - [Inference for first-price auctions with Guerre, Perrigne, and Vuong's estimator](https://doi.org/10.1016/j.jeconom.2019.02.006) (with Jun Ma and Artyom Shneyerov)<br> *Journal of Econometrics*, 2019 [WP](https://arxiv.org/pdf/1903.06401.pdf)
 
+# Unpublished work
+
+- [Identifying Collusion in English Auctions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2738789) (with Uma Kaplan and Artyom Shneyerov)
+-[Instrumental Variables Estimation and Weak-Identification-Robust Inference Based on a Conditional Quantile Restriction](https://economics.ubc.ca/wp-content/uploads/sites/38/2013/05/pdf_paper_vadim_marmer-instrumental-variables-estimation-weak-indentification-robust.pdf) (with Shinichi Sakata)
+
 <!-- This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
 
 A data-driven personal website
