@@ -13,15 +13,8 @@ This is a description of a teaching experience. You can use markdown like any ot
 Heading 1
 ======
 
-# Lecture notes
-
-1. note
-2. note
-
-<!-- 
-
 Heading 2
 ======
 
 Heading 3
-====== -->
+======
