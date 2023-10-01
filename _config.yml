@@ -90,7 +90,7 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=L_EMOyQAAAAJ&hl=en"
   email            : "vadim.marmer@ubc.ca"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              : "https://economics.ubc.ca/profile/vadim-marmer/"
+  uri              : 
   bitbucket        :
   codepen          :
   dribbble         :
@@ -117,6 +117,7 @@ author:
   youtube          :
   wikipedia        :
   ideas_repec      : "https://ideas.repec.org/f/pma398.html"
+  official_page    : "https://economics.ubc.ca/profile/vadim-marmer/"
 
 # Reading Files
 include:

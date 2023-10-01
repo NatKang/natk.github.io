@@ -29,7 +29,7 @@
         <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer }}</li>
       {% endif %}
       {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-globe-americas" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "UBC Webpage" }}</a></li>
+        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-globe-americas" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
       {% if author.email %}
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
@@ -117,6 +117,9 @@
       {% endif %}
       {% if author.ideas_repec %}
         <li><a href="{{ author.ideas_repec }}"><i class="fas fa-fw fa-book" aria-hidden="true"></i> IDEAS RePEc</a></li>
+      {% endif %}
+      {% if author.official_page %}
+        <li><a href="{{ author.official_page }}"><i class="fas fa-fw fa-globe-americas" aria-hidden="true"></i> UBC Profile</a></li>
       {% endif %}
       {% if author.wikipedia %}
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i> Wikipedia</a></li>
