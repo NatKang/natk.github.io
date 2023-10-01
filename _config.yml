@@ -11,7 +11,7 @@ title                    : "Vadim Marmer"
 title_separator          : "-"
 name                     : &name "Vadim Marmer"
 description              : &description "personal description"
-url                      : https://vadimmarmer.com # eliminitaes some CORS errors #change back to *.github.io when not using custom domain
+url                      : https://vadimmarmer.com
 #url                      : https://msvadi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "msvadi/msvadi.github.io"
@@ -70,7 +70,6 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-institutional_link: https://economics.ubc.ca/profile/vadim-marmer/
 
 
 # Analytics
