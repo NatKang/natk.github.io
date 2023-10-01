@@ -85,7 +85,7 @@ author:
   avatar           : "vadim_marmer.jpg"
   bio              : "Professor of Economics"
   location         : 
-  employer         : "UBC"
+  employer         : #"UBC"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=L_EMOyQAAAAJ&hl=en"
   email            : "vadim.marmer@ubc.ca"
