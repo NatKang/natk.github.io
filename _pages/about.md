@@ -8,18 +8,18 @@ redirect_from:
   - /about.html
 ---
 
-I am a professor of economics at the [Vancouver School of Economics](https://economics.ubc.ca) at the [University of British Columbia](https://www.ubc.ca). 
+I am a professor at the [Vancouver School of Economics](https://economics.ubc.ca) at the [University of British Columbia](https://www.ubc.ca). 
 
-I came to UBC in 2005 after completing my Ph.D. at Yale University. My main area of research is econometrics, where I have been working on  estimation and inference for auctions, weak identification, misspecification, non-stationary time series, and inference with network-dependent data.
+I came to UBC in 2005 after completing my Ph.D. at Yale University. My main area of research is econometrics with a focus on  estimation and inference for auctions, weak identification, misspecification, non-stationary time series, and inference with network-dependent data.
 
-# Recent publications
+## Recent publications
 
 - [Modeling Long Cycles](https://arxiv.org/pdf/2010.13877.pdf) (with Natasha Kang)<br> *Journal of Econometrics* (accepted)
 - [Inference on Individual Treatment Effects in Nonseparable Triangular Models](https://doi.org/10.1016/j.jeconom.2023.02.011) (with Jun Ma and Zhengfei Yu)<br> *Journal of Econometrics*, 2023 [WP](https://arxiv.org/pdf/2107.05559.pdf)
 - [Monotonicity-Constrained Nonparametric Estimation and Inference for First-Price Auctions](https://doi.org/10.1080/07474938.2021.1889198) (with Jun Ma, Artyom Shneyerov, and Pai Xu)<br> *Econometric Reviews*, 2021 [WP](https://arxiv.org/pdf/1909.12974.pdf)
 - [Limit Theorems for Network Dependent Random Variables](https://doi.org/10.1016/j.jeconom.2020.05.019) (with Denis Kojevnikov and Kevin Song)<br> *Journal of Econometrics*, 2021 [WP](https://arxiv.org/pdf/1903.01059.pdf) 
 
-# Unpublished work
+## Unpublished work
 
 - [Identifying Collusion in English Auctions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2738789) (with Uma Kaplan and Artyom Shneyerov)
 - [Instrumental Variables Estimation and Weak-Identification-Robust Inference Based on a Conditional Quantile Restriction](https://economics.ubc.ca/wp-content/uploads/sites/38/2013/05/pdf_paper_vadim_marmer-instrumental-variables-estimation-weak-indentification-robust.pdf) (with Shinichi Sakata)
