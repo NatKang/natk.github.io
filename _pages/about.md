@@ -18,7 +18,6 @@ I came to UBC in 2005 after completing my Ph.D. at Yale University. My main area
 - [Inference on Individual Treatment Effects in Nonseparable Triangular Models](https://doi.org/10.1016/j.jeconom.2023.02.011) (with Jun Ma and Zhengfei Yu)<br> *Journal of Econometrics*, 2023 [WP](https://arxiv.org/pdf/2107.05559.pdf)
 - [Monotonicity-Constrained Nonparametric Estimation and Inference for First-Price Auctions](https://doi.org/10.1080/07474938.2021.1889198) (with Jun Ma, Artyom Shneyerov, and Pai Xu)<br> *Econometric Reviews*, 2021 [WP](https://arxiv.org/pdf/1909.12974.pdf)
 - [Limit Theorems for Network Dependent Random Variables](https://doi.org/10.1016/j.jeconom.2020.05.019) (with Denis Kojevnikov and Kevin Song)<br> *Journal of Econometrics*, 2021 [WP](https://arxiv.org/pdf/1903.01059.pdf) 
-- [Inference for first-price auctions with Guerre, Perrigne, and Vuong's estimator](https://doi.org/10.1016/j.jeconom.2019.02.006) (with Jun Ma and Artyom Shneyerov)<br> *Journal of Econometrics*, 2019 [WP](https://arxiv.org/pdf/1903.06401.pdf)
 
 # Unpublished work
 
