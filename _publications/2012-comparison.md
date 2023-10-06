@@ -1,7 +1,7 @@
 ---
 title: "Comparison of misspecified calibrated models: The minimum distance approach"
 collection: publications
-permalink: /publication/2012-quantile
+permalink: /publication/2012-comparison
 #excerpt: 'This paper is about the number 2. The number 2 is left for future work.'
 date: 2012-07-01
 venue: 'Journal of Econometrics'
