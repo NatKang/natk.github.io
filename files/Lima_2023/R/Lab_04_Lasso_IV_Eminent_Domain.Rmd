@@ -1,0 +1,79 @@
+---
+title: "Lab 05: Many IVs"
+output: html_document
+date: '2023-03-03'
+---
+
+
+```{r}
+suppressMessages({
+library(hdm)
+library(AER)
+data("EminentDomain")
+})
+```
+
+```{r}
+names(EminentDomain$logNM)
+```
+
+```{r}
+?EminentDomain
+```
+
+
+
+* Outcome: Housing Prices in the Non-metro area (the `logNM` sub-dataset)
+* Main regressor: Eminent domain decisions
+
+
+```{r}
+x=EminentDomain$logNM$x
+y=EminentDomain$logNM$y
+z=EminentDomain$logNM$z
+d=EminentDomain$logNM$d
+```
+
+Many IVs:
+```{r}
+dim(z)
+```
+
+```{r}
+dim(x)
+```
+
+
+
+```{r}
+TSLS<-ivreg(y~d+x | z+x)
+coeftest(TSLS,vcov. = vcovHC(TSLS,type="HC0"))[1:2,]
+```
+
+
+With selection of IVs:
+```{r}
+model.NM<-rlassoIV(
+        y=y,
+        d=d,
+        x=x,
+        z=z,
+         select.Z = TRUE,
+         select.X = FALSE)
+summary(model.NM)
+```
+
+* Different sign
+* Significance
+
+Confidence interval:
+```{r}
+confint(model.NM)
+```
+
+
+```{r}
+model.NM$selected
+```
+
+

@@ -1,0 +1,234 @@
+---
+title: 'Lab 02: Lasso Illustration'
+output: html_document
+---
+
+
+```{r}
+suppressMessages({
+library(foreach)
+library(glmnet)
+library(kableExtra)
+library(stargazer)
+})
+```
+
+We illustrate Lasso using simulated data.
+
+# DGP
+
+We use the same polynomial regression model as before:
+
+Consider a polynomial regression model:
+
+\begin{align}
+Y_i & = \beta_0+\beta_1 X_{i}+\beta_2 X_i^2+\ldots+\beta_{p_0} X_i^{p_0}+U_i,\\
+U_i &\sim N(0,1),\\
+X_i &\sim N(0,1).
+\end{align}
+
+A custom function to generate data:
+```{r}
+DGP<-function(n,p0){
+  #p0 = the number of polynomial terms
+  #n = the number of observations
+  X<-rnorm(n)
+  U<-rnorm(n)
+  Y<-U
+  for (j in 1:p0){
+    Y<-Y+X^j
+  }
+  return(list(y=Y,x=X))
+}
+```
+
+Generate data with four polynomial terms:
+```{r}
+n=30
+p0=4
+set.seed(42)
+MyData<-DGP(n=n,p0=p0)
+```
+
+
+# Lasso
+
+One of the R functions for Lasso is `glmnet()` from the package `glmnet()`:
+
+* `glmnet(x,y,alpha=1)` where
+  - `x` = matrix of observations on the regressors
+  - `y` = vector of observations on the dependent variable
+  - `alpha=1` instructs to run Lasso; `alpha=0` runs Ridge
+* We will use the `model.matrix()` function to create the matrix of observations on the regressors. 
+  - The option `[,-1]` instructs it to drop the first column in the matrix, which is the intercept.
+
+Let's run lasso with 10 polynomial terms:
+```{r}
+p=10
+X=model.matrix(MyData$y ~ poly(MyData$x,p=p,raw=TRUE))[,-1]
+Lasso<-glmnet(x=X,
+              y=MyData$y,
+              #standardize = F,
+              alpha=1)
+names(Lasso)
+```
+
+* We named the output object from `glmnet()` as `Lasso`.
+* `Lasso$lambda` contains the vector of values for the penalty parameter generated automatically by `glmnet()`. 
+  - You can also supply your own `lambda` values by using `lambda=` option in `glmnet()`.
+* `Lasso$beta` contains the vector of estimated coefficients for each value of `Lasso$lambda`.
+
+For example:
+```{r}
+Lasso$beta[,10]
+```
+
+Let's compare the coefficients for different values of the penalty parameter `lambda`. We use the `kable()` function from the package `kableExtra` to construct a table:
+```{r}
+lambda_ind_1=1
+lambda_ind_2=10
+lambda_ind_3=25
+lambda_ind_4=length(Lasso$lambda)
+
+ind=seq(from=1,to=p, by=1)
+cbind(ind,Lasso$beta[,lambda_ind_1],Lasso$beta[,lambda_ind_2],Lasso$beta[,lambda_ind_3],Lasso$beta[,lambda_ind_4]) %>%
+  kable(digits=3,
+        align=c(rep('c',times=4)),
+        caption="Estimated Lasso coefficients for different $\\lambda$ penalty parameter values",
+        row.names = FALSE,
+        col.names=c("Polynom. terms",paste0("$\\lambda=$ ",round(Lasso$lambda[lambda_ind_1],digits=2)),paste0("$\\lambda=$ ",round(Lasso$lambda[lambda_ind_2],digits=2)),paste0("$\\lambda=$ ",round(Lasso$lambda[lambda_ind_3],digits=2)),paste0("$\\lambda=$ ",round(Lasso$lambda[lambda_ind_4],digits=2)))
+        ) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+```
+
+
+
+*  **Note** that by default, `glmnet()` standardizes all regressors to have unit variances. More on that later.
+  - For our purposes, we only care if the coefficient is zero or not.
+*  Smaller `lambda` tends to produce more non-zero coefficients.
+
+
+```{r}
+Lasso_s<-glmnet(x=X,
+              y=MyData$y,
+              lambda=0.001,
+              alpha=1)
+Lasso_s$beta
+```
+
+* Now all ten regressors are included.
+* Choosing the penalty parameter properly is crucial.
+* `glmnet()` comes with a set of tools (cross-validation) designed to choose the best `lambda` for **prediction**.
+  - May not be always good for regressors' selection.
+
+
+# Lasso selection with estimation-targeted penalty parameter `lambda` 
+
+
+```{r}
+Lasso_s<-glmnet(x=X,
+              y=MyData$y,
+              lambda=2*sqrt(2*log(n*p)/n),
+              alpha=1)
+Lasso_s$beta
+```
+
+
+
+# MC simulations for Lasso's accuracy
+
+A custom function to generate data, run Lasso, and check included regressors:
+```{r}
+Selected<-function(n,lambda){
+  #n=sample size
+  MyData<-DGP(n=n,p0=4)
+  X=model.matrix(MyData$y ~ poly(MyData$x,p=10,raw=TRUE))[,-1]
+  Lasso.mc<-glmnet(x=X,
+              y=MyData$y,
+              alpha=1,
+              lambda=lambda,
+              )
+  IN_r<-sum(Lasso.mc$beta[1:4] != 0)
+  IN_w<-sum(Lasso.mc$beta[5:10] !=0)
+  return(list(right=IN_r,wrong=IN_w))
+}
+```
+
+
+Let's run the simulations 100 times: 
+```{r}
+set.seed(42)
+OUT<-foreach(r=1:100, .combine='rbind') %do% Selected(n=1000,lambda=2*sqrt(log(2*n*10)/n))
+cat('Ave number of correct regressors included = ',mean(unlist(lapply(OUT[,1],as.vector,))),'\n')
+cat('Ave number of wrong regressors included   = ',mean(unlist(lapply(OUT[,2],as.vector))))
+```
+
+Very accurate selection in large samples!
+
+
+# Small coefficients, Lasso, bias
+
+Let's change the DGP:
+
+\begin{align}
+Y_i & = \beta_0+ D_i+\beta X_{i} +U_i,\\
+D_i &=X_i+ \rho\cdot N(0,1), \\
+X_i &\sim N(0,1),\\
+U_i &\sim N(0,0.01).
+\end{align}
+
+* $D_i$ is the main regressor of interest.
+* The control $X_i$ is generated to be correlated with $D_i$ depending on the value of $\rho$.
+  - Smaller $\rho$ implies a stronger relationship.
+* The coefficient on $X_i$ may be small. 
+
+A new custom function to generate data:
+```{r}
+DGP2<-function(n,rho,beta){
+  #n = number of observations
+  #rho= determines the relationship between the main regressor D and control X. Small rho -> strong relationship
+  #beta= coefficient on the control X.
+  X<-rnorm(n)
+  D<-X+rho*rnorm(n)
+  U<-rnorm(n)
+  Y<-D+beta*X+0.1*U
+  return(list(Y=Y,X=X,D=D))
+}
+```
+
+
+Let's generate data with a small $\rho=0.1$, a small $\beta =2/\sqrt{n}$, and run Lasso:
+```{r}
+set.seed(42)
+MyData<-DGP2(n=100,rho=.1,beta=2/sqrt(n))
+X=model.matrix(MyData$Y ~ MyData$D+MyData$X)[,-1]
+Lasso2<-glmnet(x=X,
+              y=MyData$Y,
+              alpha=1,
+              lambda=2*sqrt(log(2*n*10)/n),
+              )
+coef(Lasso2)
+```
+
+
+* $X_i$ is dropped because it has a small coefficient!
+
+
+Let's see if omitting $X_i$ causes bias:
+```{r}
+model.long<-lm(MyData$Y~MyData$D+MyData$X)
+model.short<-lm(MyData$Y~MyData$D)
+stargazer(model.long,model.short,
+          type="text",
+          omit.stat=c("ll","ser","f","n")
+)
+```
+
+* When the control $X_i$ is omitted, we see a substantial bias in the estimated coefficient on the main regressor $D_i$: approx 35%!
+  - This despite $X_i$ having a small coefficient.
+  - The reason: a strong relationship between $D_i$ and $X_i$.
+  - Conclusion: We should be more careful with controls that have a strong relationship with the main regressor.
+
+
+
+---

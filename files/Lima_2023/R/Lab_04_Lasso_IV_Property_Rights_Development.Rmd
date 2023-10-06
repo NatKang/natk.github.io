@@ -1,0 +1,149 @@
+---
+title: 'Lab 04: Lasso and IVs: Institutions and development'
+output: html_document
+date: '2023-03-03'
+---
+
+```{r}
+suppressMessages({
+library(hdm)
+library(AER)
+data("AJR")
+})
+```
+
+The original paper: D. Acemoglu, S. Johnson, J. A. Robinson (2001). "Colonial origins of comparative development: an empirical investigation." American Economic Review, 91, 1369–1401.
+
+# Model
+
+$$\begin{equation}
+\log (\text{GDP}_i) = \alpha\cdot \text{PropertyRights}_i+X_i'\beta+U_i.
+\end{equation}$$
+
+* `GDP` = GDP per capita.
+* Property Rights: Institutions, protection from expropriation (the `Exprop` variable).
+* Endogeneity: Simultaneity between the output and institutions.
+* IV: Mortality of early settlers (`logMort`).
+
+First stage:
+
+$$\begin{equation}
+\text{PropertyRights}_i = \pi_1\cdot \text{logMortality}_i+X_i'\Pi_2+V_i
+\end{equation}$$
+
+Potential controls in $X_i$:
+
+* `Latitude`
+* `Latitude2` (latitude squared)
+* `Africa`
+* `Asia`
+* `Namer` (North America)
+* `Samer` (South America)
+* `Neo` (Neo-Europes)
+
+# 2SLS estimation with all controls:
+
+```{r}
+TSLS<-ivreg(log(GDP)~Exprop+Latitude+Latitude2+Africa+Asia+Namer+Samer+Neo
+            | logMort+Latitude+Latitude2+Africa+Asia+Namer+Samer+Neo,data=AJR)
+coeftest(TSLS,vcov. = vcovHC(TSLS,type="HC0"))
+```
+
+* We use `vcovHC` to correct for heteroskedasticity.
+* Insignificant estimate on the main variable `Exprop`.
+
+First stage:
+```{r}
+FS<-lm(Exprop~logMort+Latitude+Latitude2+Africa+Asia+Namer+Samer+Neo,data=AJR)
+coeftest(FS,vcov. = vcovHC(FS,type="HC0"))
+```
+* Insignificant IV in the first stage.
+
+# Lasso-based approach
+
+We generate the vector/matrices for the dep. variable, main regressor, IV, potential controls
+```{r}
+Y<-log(AJR$GDP)
+X<-model.matrix(Exprop~Latitude+Latitude2+Africa+Asia+Namer+Samer+Neo,data=AJR)[,-1]
+Z<-AJR$logMort
+D<-AJR$Exprop
+```
+
+Lasso implementation:
+
+* `y` = dep. var
+* `d` = the main regressor of interest
+* `z` = IVs
+* `x` = controls
+* `select.X=` for controls selection
+* `select.Z=` for IVs selection
+
+```{r}
+rTSLS<-rlassoIV(y=Y,x=X,d=D,z=Z,select.X = TRUE,select.Z = FALSE)
+summary(rTSLS)
+```
+* Significant estimates
+* Marginal effect: 10% increase in GDP due to property rights
+
+
+# Step by step with Lasso selection (Many controls, few IVs)
+
+
+### Step 1: Controls and $D$
+
+```{r}
+model.D<-rlasso(D~X)
+model.D$index
+```
+
+* Only `Neo` is selected
+
+Residuals:
+```{r}
+Dtilde<-model.D$residuals
+```
+
+* The residuals in the `rlasso()` output are post-lasso!
+* `rlasso()` has the option for post-Lasso: `post=TRUE` (default) or `post=FALSE`.
+
+```{r}
+coef(model.D)
+```
+
+
+
+### Step 2: Controls and $Y$
+
+```{r}
+model.Y<-rlasso(Y~X)
+Ytilde<-model.Y$residuals
+model.Y$index
+```
+
+* Selected controls for $Y$:
+  - `Latitude2`
+  - `Africa`
+  - `Samer`
+  - `Neo`
+  
+### Step 3: Controls and $Z$
+
+```{r}
+model.Z<-rlasso(Z~X)
+Ztilde<-model.Z$residuals
+model.Z$index
+```
+
+* Selected controls for $Z$:
+- `Africa`
+- `Neo`
+
+### Step 4: IV estimation using the residuals
+
+Run without the intercept: all variables are in the residual form:
+```{r}
+rTSLStilde<-ivreg(Ytilde ~ -1 +Dtilde | Ztilde)
+coeftest(rTSLStilde,vcov.=vcovHC(rTSLStilde,type="HC0"))
+```
+
+---
