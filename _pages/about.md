@@ -10,11 +10,11 @@ redirect_from:
 
 I am a professor at the [Vancouver School of Economics](https://economics.ubc.ca) at the [University of British Columbia](https://www.ubc.ca). 
 
-I came to UBC in 2005 after completing my Ph.D. at Yale University. My main area of research is econometrics with a focus on  estimation and inference for auctions, weak identification, misspecification, non-stationary time series, and inference with network-dependent data.
+I came to UBC in 2005 after completing my Ph.D. at Yale University. My main area of research is econometrics with a focus on estimation and inference for auctions, weak identification, misspecification, non-stationary time series, and inference with network-dependent data.
 
 ## Recent publications
 
-- [Modeling Long Cycles](https://arxiv.org/pdf/2010.13877.pdf) (with Natasha Kang)<br> *Journal of Econometrics* (accepted)
+- [Modeling Long Cycles](https://doi.org/10.1016/j.jeconom.2024.105751) (with Natasha Kang)<br> *Journal of Econometrics*, 2024 [WP](https://arxiv.org/pdf/2010.13877.pdf)
 - [Inference on Individual Treatment Effects in Nonseparable Triangular Models](https://doi.org/10.1016/j.jeconom.2023.02.011) (with Jun Ma and Zhengfei Yu)<br> *Journal of Econometrics*, 2023 [WP](https://arxiv.org/pdf/2107.05559.pdf)
 - [Monotonicity-Constrained Nonparametric Estimation and Inference for First-Price Auctions](https://doi.org/10.1080/07474938.2021.1889198) (with Jun Ma, Artyom Shneyerov, and Pai Xu)<br> *Econometric Reviews*, 2021 [WP](https://arxiv.org/pdf/1909.12974.pdf)
 - [Limit Theorems for Network Dependent Random Variables](https://doi.org/10.1016/j.jeconom.2020.05.019) (with Denis Kojevnikov and Kevin Song)<br> *Journal of Econometrics*, 2021 [WP](https://arxiv.org/pdf/1903.01059.pdf) 
