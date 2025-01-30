@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a professor at the [Vancouver School of Economics](https://economics.ubc.ca) at the [University of British Columbia](https://www.ubc.ca). 
+I am a professor at the [Xiamen University](https://economics.ubc.ca).
 
 I came to UBC in 2005 after completing my Ph.D. at Yale University. My main area of research is econometrics with a focus on estimation and inference for auctions, weak identification, misspecification, non-stationary time series, and inference with network-dependent data.
 
