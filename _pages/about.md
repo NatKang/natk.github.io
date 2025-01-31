@@ -8,8 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-# Dr. Natasha Kang  
-Assistant Professor | Wang Yanan Institute for Studies in Economics, Xiamen University
+I am an assistant Professor at Wang Yanan Institute for Studies in Economics, Xiamen University.
 
 My primary research interest lies at the intersection of time series econometrics and macroeconomics, with a focus on business and financial cycle analysis. In addition, I am involved in research on international portfolio choices.
 
