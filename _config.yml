@@ -82,7 +82,7 @@ analytics:
 # Site Author
 author:
   name             : "Natasha Kang"
-  avatar           : 
+  avatar           : "/images/profile.jpg"
   bio              : #"Assistant Professor"
   location         : 
   employer         : #"XMU"
