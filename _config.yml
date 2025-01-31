@@ -83,12 +83,12 @@ analytics:
 author:
   name             : "Natasha Kang"
   avatar           : 
-  bio              : "Professor of Economics, UBC"
+  bio              : "Assistant Professor of Economics, XMU"
   location         : 
   employer         : #"UBC"
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=L_EMOyQAAAAJ&hl=en"
-  email            : "vadim.marmer@ubc.ca"
+  googlescholar    : #"https://scholar.google.com/citations?user=L_EMOyQAAAAJ&hl=en"
+  email            : "natk@xmu.edu.cn"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              : 
   bitbucket        :
@@ -104,7 +104,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "https://orcid.org/0000-0001-9483-1152"
+  orcid            : #"https://orcid.org/0000-0001-9483-1152"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -116,8 +116,8 @@ author:
   xing             :
   youtube          :
   wikipedia        :
-  ideas_repec      : "https://ideas.repec.org/f/pma398.html"
-  official_page    : "https://economics.ubc.ca/profile/vadim-marmer/"
+  ideas_repec      : #"https://ideas.repec.org/f/pma398.html"
+  official_page    : #"https://economics.ubc.ca/profile/vadim-marmer/"
 
 # Reading Files
 include:

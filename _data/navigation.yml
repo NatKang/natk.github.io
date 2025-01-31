@@ -1,10 +1,10 @@
  # main links links
 main:
   - title: "CV"
-    url: /files/vadim_marmer_CV.pdf
+    url: /files/natasha_cv.pdf
   
-  - title: "Publications"
-    url: /publications/
+  # - title: "Publications"
+  #   url: /publications/
 
   #- title: "Talks"
   #  url: /talks/    
