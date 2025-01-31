@@ -14,7 +14,7 @@ My primary research interest lies at the intersection of time series econometric
 
 ## Recent publications
 
-- [Modeling Long Cycles](https://doi.org/10.1016/j.jeconom.2024.105751) (with Natasha Kang)<br> *Journal of Econometrics*, 2024 [WP](https://arxiv.org/pdf/2010.13877.pdf)
+- [Modeling Long Cycles](https://doi.org/10.1016/j.jeconom.2024.105751) (with Vadim Marmer)<br> *Journal of Econometrics*, 2024 [WP](https://arxiv.org/pdf/2010.13877.pdf)
 
 
 
