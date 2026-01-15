@@ -39,3 +39,8 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+/* Hide author avatar (remove image and reserved space, keep name/email) */
+.author__avatar {
+  display: none !important;
+}
