@@ -4,6 +4,7 @@ title: "Teaching"
 permalink: /teaching/
 author_profile: true
 ---
+
 ## Undergraduate Courses
 
 - [Time Series Analysis (WISE)](/teaching/time-series-analysis/)
