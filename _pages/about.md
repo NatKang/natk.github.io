@@ -12,7 +12,6 @@ redirect_from:
 
 I am an Assistant Professor at Wang Yanan Institute for Studies in Economics, Xiamen University.
 
-My primary research interest lies at the intersection of time series econometrics and macroeconomics, with a focus on business and financial cycle analysis. Additionally, I am engaged in research on international portfolio choices.
 
 
 
