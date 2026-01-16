@@ -73,7 +73,91 @@ window.Quarto = {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="linear-time-series-models.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#why-do-we-need-time-series-models" id="toc-why-do-we-need-time-series-models" class="nav-link active" data-scroll-target="#why-do-we-need-time-series-models">Why Do We Need Time Series Models?</a></li>
+  <li><a href="#a-general-dynamic-time-series-representation" id="toc-a-general-dynamic-time-series-representation" class="nav-link" data-scroll-target="#a-general-dynamic-time-series-representation">A General Dynamic Time Series Representation</a></li>
+  <li><a href="#linear-time-series-models" id="toc-linear-time-series-models" class="nav-link" data-scroll-target="#linear-time-series-models">Linear Time Series Models</a></li>
+  <li><a href="#the-lag-backshift-operator" id="toc-the-lag-backshift-operator" class="nav-link" data-scroll-target="#the-lag-backshift-operator">The Lag (Backshift) Operator</a></li>
+  <li><a href="#autoregressive-models" id="toc-autoregressive-models" class="nav-link" data-scroll-target="#autoregressive-models">Autoregressive Models</a>
+  <ul class="collapse">
+  <li><a href="#mean-and-intercept" id="toc-mean-and-intercept" class="nav-link" data-scroll-target="#mean-and-intercept">Mean and Intercept</a></li>
+  </ul></li>
+  <li><a href="#ar-models-in-lag-operator-form" id="toc-ar-models-in-lag-operator-form" class="nav-link" data-scroll-target="#ar-models-in-lag-operator-form">AR Models in Lag-Operator Form</a></li>
+  <li><a href="#example-the-ar1-model" id="toc-example-the-ar1-model" class="nav-link" data-scroll-target="#example-the-ar1-model">Example: The AR(1) Model</a>
+  <ul class="collapse">
+  <li><a href="#stability-and-initial-conditions" id="toc-stability-and-initial-conditions" class="nav-link" data-scroll-target="#stability-and-initial-conditions">Stability and Initial Conditions</a></li>
+  </ul></li>
+  <li><a href="#interpreting-the-mainfty-representation" id="toc-interpreting-the-mainfty-representation" class="nav-link" data-scroll-target="#interpreting-the-mainfty-representation">Interpreting the MA(<span class="math inline">\(\infty\)</span>) Representation</a></li>
+  <li><a href="#example-conti.-first-and-second-moments" id="toc-example-conti.-first-and-second-moments" class="nav-link" data-scroll-target="#example-conti.-first-and-second-moments">Example conti.: First and Second Moments</a>
+  <ul class="collapse">
+  <li><a href="#mean" id="toc-mean" class="nav-link" data-scroll-target="#mean">Mean</a></li>
+  <li><a href="#autocovariances" id="toc-autocovariances" class="nav-link" data-scroll-target="#autocovariances">Autocovariances</a></li>
+  <li><a href="#autocorrelation" id="toc-autocorrelation" class="nav-link" data-scroll-target="#autocorrelation">Autocorrelation</a></li>
+  </ul></li>
+  <li><a href="#simulated-sample-path-of-ar1-processes" id="toc-simulated-sample-path-of-ar1-processes" class="nav-link" data-scroll-target="#simulated-sample-path-of-ar1-processes">Simulated Sample Path of AR(1) Processes</a></li>
+  <li><a href="#explosive-ar1-models-and-causality" id="toc-explosive-ar1-models-and-causality" class="nav-link" data-scroll-target="#explosive-ar1-models-and-causality">Explosive AR(1) Models and Causality</a></li>
+  <li><a href="#causality-in-time-series" id="toc-causality-in-time-series" class="nav-link" data-scroll-target="#causality-in-time-series">Causality in Time Series</a></li>
+  <li><a href="#every-explosion-has-a-cause" id="toc-every-explosion-has-a-cause" class="nav-link" data-scroll-target="#every-explosion-has-a-cause">Every Explosion Has a Cause</a>
+  <ul class="collapse">
+  <li><a href="#distributional-equivalence" id="toc-distributional-equivalence" class="nav-link" data-scroll-target="#distributional-equivalence">Distributional equivalence</a></li>
+  </ul></li>
+  <li><a href="#moving-average-models" id="toc-moving-average-models" class="nav-link" data-scroll-target="#moving-average-models">Moving Average Models</a></li>
+  <li><a href="#example-the-ma1-process" id="toc-example-the-ma1-process" class="nav-link" data-scroll-target="#example-the-ma1-process">Example: The MA(1) Process</a></li>
+  <li><a href="#simulated-sample-path-of-ma1-processes" id="toc-simulated-sample-path-of-ma1-processes" class="nav-link" data-scroll-target="#simulated-sample-path-of-ma1-processes">Simulated Sample Path of MA(1) Processes</a></li>
+  <li><a href="#non-uniqueness-of-ma-models-and-invertibility" id="toc-non-uniqueness-of-ma-models-and-invertibility" class="nav-link" data-scroll-target="#non-uniqueness-of-ma-models-and-invertibility">Non-uniqueness of MA Models and Invertibility</a></li>
+  <li><a href="#invertibility-in-time-series" id="toc-invertibility-in-time-series" class="nav-link" data-scroll-target="#invertibility-in-time-series">Invertibility in Time Series</a></li>
+  <li><a href="#arma-models" id="toc-arma-models" class="nav-link" data-scroll-target="#arma-models">ARMA Models</a>
+  <ul class="collapse">
+  <li><a href="#parameter-redundancy" id="toc-parameter-redundancy" class="nav-link" data-scroll-target="#parameter-redundancy">Parameter Redundancy</a></li>
+  </ul></li>
+  <li><a href="#ar-and-ma-polynomials" id="toc-ar-and-ma-polynomials" class="nav-link" data-scroll-target="#ar-and-ma-polynomials">AR and MA Polynomials</a></li>
+  <li><a href="#causality-and-invertibility-of-arma" id="toc-causality-and-invertibility-of-arma" class="nav-link" data-scroll-target="#causality-and-invertibility-of-arma">Causality and Invertibility of ARMA</a>
+  <ul class="collapse">
+  <li><a href="#root-conditions" id="toc-root-conditions" class="nav-link" data-scroll-target="#root-conditions">Root Conditions</a></li>
+  </ul></li>
+  <li><a href="#implications-for-arma-models" id="toc-implications-for-arma-models" class="nav-link" data-scroll-target="#implications-for-arma-models">Implications for ARMA Models</a>
+  <ul class="collapse">
+  <li><a href="#causality-via-the-ar-root-condition" id="toc-causality-via-the-ar-root-condition" class="nav-link" data-scroll-target="#causality-via-the-ar-root-condition">Causality via the AR root condition</a></li>
+  <li><a href="#invertibility-via-the-ma-root-condition" id="toc-invertibility-via-the-ma-root-condition" class="nav-link" data-scroll-target="#invertibility-via-the-ma-root-condition">Invertibility via the MA root condition</a></li>
+  <li><a href="#arma-duality" id="toc-arma-duality" class="nav-link" data-scroll-target="#arma-duality">AR–MA Duality</a></li>
+  </ul></li>
+  <li><a href="#wold-decomposition-why-mainfty-is-fundamental" id="toc-wold-decomposition-why-mainfty-is-fundamental" class="nav-link" data-scroll-target="#wold-decomposition-why-mainfty-is-fundamental">Wold Decomposition (Why MA(<span class="math inline">\(\infty\)</span>) Is Fundamental)</a>
+  <ul class="collapse">
+  <li><a href="#wold-decomposition" id="toc-wold-decomposition" class="nav-link" data-scroll-target="#wold-decomposition">Wold Decomposition</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#connection-to-arma" id="toc-connection-to-arma" class="nav-link" data-scroll-target="#connection-to-arma">Connection to ARMA</a></li>
+  </ul></li>
+  <li><a href="#autocorrelation-of-an-maq-process" id="toc-autocorrelation-of-an-maq-process" class="nav-link" data-scroll-target="#autocorrelation-of-an-maq-process">Autocorrelation of an MA(<span class="math inline">\(q\)</span>) Process</a>
+  <ul class="collapse">
+  <li><a href="#mean-1" id="toc-mean-1" class="nav-link" data-scroll-target="#mean-1">Mean</a></li>
+  </ul></li>
+  <li><a href="#autocorrelation-of-an-arp-process" id="toc-autocorrelation-of-an-arp-process" class="nav-link" data-scroll-target="#autocorrelation-of-an-arp-process">Autocorrelation of an AR(<span class="math inline">\(p\)</span>) Process</a>
+  <ul class="collapse">
+  <li><a href="#autocovariances-recursion-for-larger-lags" id="toc-autocovariances-recursion-for-larger-lags" class="nav-link" data-scroll-target="#autocovariances-recursion-for-larger-lags">Autocovariances: recursion for larger lags</a></li>
+  </ul></li>
+  <li><a href="#autocovariances-of-an-armapq-process" id="toc-autocovariances-of-an-armapq-process" class="nav-link" data-scroll-target="#autocovariances-of-an-armapq-process">Autocovariances of an ARMA(<span class="math inline">\(p,q\)</span>) Process</a>
+  <ul class="collapse">
+  <li><a href="#autocovariance-initial-values-and-recursion" id="toc-autocovariance-initial-values-and-recursion" class="nav-link" data-scroll-target="#autocovariance-initial-values-and-recursion">Autocovariance: initial values and recursion</a></li>
+  <li><a href="#initial-values" id="toc-initial-values" class="nav-link" data-scroll-target="#initial-values">Initial values</a></li>
+  <li><a href="#recursion" id="toc-recursion" class="nav-link" data-scroll-target="#recursion">Recursion</a></li>
+  </ul></li>
+  <li><a href="#partial-autocorrelation-function-pacf." id="toc-partial-autocorrelation-function-pacf." class="nav-link" data-scroll-target="#partial-autocorrelation-function-pacf.">Partial Autocorrelation Function (PACF).</a>
+  <ul class="collapse">
+  <li><a href="#definition-partial-autocorrelation-function" id="toc-definition-partial-autocorrelation-function" class="nav-link" data-scroll-target="#definition-partial-autocorrelation-function">Definition (Partial Autocorrelation Function)</a></li>
+  <li><a href="#equivalent-regression-characterization" id="toc-equivalent-regression-characterization" class="nav-link" data-scroll-target="#equivalent-regression-characterization">Equivalent regression characterization</a></li>
+  </ul></li>
+  <li><a href="#acf-and-pacf-canonical-patterns" id="toc-acf-and-pacf-canonical-patterns" class="nav-link" data-scroll-target="#acf-and-pacf-canonical-patterns">ACF and PACF: Canonical Patterns</a></li>
+  <li><a href="#where-we-are-and-what-comes-next" id="toc-where-we-are-and-what-comes-next" class="nav-link" data-scroll-target="#where-we-are-and-what-comes-next">Where We Are (and What Comes Next)</a>
+  <ul class="collapse">
+  <li><a href="#what-we-have-done" id="toc-what-we-have-done" class="nav-link" data-scroll-target="#what-we-have-done">What we have done</a></li>
+  <li><a href="#what-comes-next" id="toc-what-comes-next" class="nav-link" data-scroll-target="#what-comes-next">What comes next</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -362,7 +446,7 @@ x_t = \sum_{j=0}^{\infty} \phi^j w_{t-j},
 </section>
 <section id="simulated-sample-path-of-ar1-processes" class="level2">
 <h2 class="anchored" data-anchor-id="simulated-sample-path-of-ar1-processes">Simulated Sample Path of AR(1) Processes</h2>
-<div id="9995902c" class="cell" data-execution_count="1">
+<div id="e9521a3f" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -512,7 +596,7 @@ x_t = w_t + \theta w_{t-1},
 </section>
 <section id="simulated-sample-path-of-ma1-processes" class="level2">
 <h2 class="anchored" data-anchor-id="simulated-sample-path-of-ma1-processes">Simulated Sample Path of MA(1) Processes</h2>
-<div id="def4f021" class="cell" data-execution_count="2">
+<div id="ddcd620e" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -974,7 +1058,7 @@ x_t
 </section>
 <section id="acf-and-pacf-canonical-patterns" class="level2">
 <h2 class="anchored" data-anchor-id="acf-and-pacf-canonical-patterns">ACF and PACF: Canonical Patterns</h2>
-<div id="49b679f4" class="cell" data-execution_count="3">
+<div id="0cd709d0" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

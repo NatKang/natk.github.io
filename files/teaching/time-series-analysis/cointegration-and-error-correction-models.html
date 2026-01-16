@@ -73,7 +73,46 @@ window.Quarto = {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="cointegration-and-error-correction-models.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#can-we-remove-a-stochastic-trend-by-detrending" id="toc-can-we-remove-a-stochastic-trend-by-detrending" class="nav-link active" data-scroll-target="#can-we-remove-a-stochastic-trend-by-detrending">Can we remove a stochastic trend by detrending?</a></li>
+  <li><a href="#choosing-the-right-transformation" id="toc-choosing-the-right-transformation" class="nav-link" data-scroll-target="#choosing-the-right-transformation">Choosing the Right Transformation</a></li>
+  <li><a href="#a-critique-of-differencing" id="toc-a-critique-of-differencing" class="nav-link" data-scroll-target="#a-critique-of-differencing">A Critique of Differencing</a></li>
+  <li><a href="#what-if-we-do-not-difference" id="toc-what-if-we-do-not-difference" class="nav-link" data-scroll-target="#what-if-we-do-not-difference">What If We Do Not Difference?</a></li>
+  <li><a href="#can-we-trust-statistical-association-in-levels" id="toc-can-we-trust-statistical-association-in-levels" class="nav-link" data-scroll-target="#can-we-trust-statistical-association-in-levels">Can We Trust Statistical Association in Levels?</a></li>
+  <li><a href="#spurious-regression" id="toc-spurious-regression" class="nav-link" data-scroll-target="#spurious-regression">Spurious Regression</a></li>
+  <li><a href="#illustration-independent-persistent-series" id="toc-illustration-independent-persistent-series" class="nav-link" data-scroll-target="#illustration-independent-persistent-series">Illustration: Independent Persistent Series</a>
+  <ul class="collapse">
+  <li><a href="#r-squared" id="toc-r-squared" class="nav-link" data-scroll-target="#r-squared">R-squared</a></li>
+  <li><a href="#regression-residuals" id="toc-regression-residuals" class="nav-link" data-scroll-target="#regression-residuals">Regression Residuals</a></li>
+  </ul></li>
+  <li><a href="#nonstationary-residuals" id="toc-nonstationary-residuals" class="nav-link" data-scroll-target="#nonstationary-residuals">Nonstationary Residuals</a></li>
+  <li><a href="#illustration-same-data-after-differencing" id="toc-illustration-same-data-after-differencing" class="nav-link" data-scroll-target="#illustration-same-data-after-differencing">Illustration: Same Data, After Differencing</a></li>
+  <li><a href="#when-is-a-levels-regression-not-spurious" id="toc-when-is-a-levels-regression-not-spurious" class="nav-link" data-scroll-target="#when-is-a-levels-regression-not-spurious">When Is a Levels Regression Not Spurious?</a></li>
+  <li><a href="#cointegration" id="toc-cointegration" class="nav-link" data-scroll-target="#cointegration">Cointegration</a></li>
+  <li><a href="#cointegration-economic-motivation" id="toc-cointegration-economic-motivation" class="nav-link" data-scroll-target="#cointegration-economic-motivation">Cointegration: Economic Motivation</a></li>
+  <li><a href="#consumption-and-income-permanent-income-hypothesis" id="toc-consumption-and-income-permanent-income-hypothesis" class="nav-link" data-scroll-target="#consumption-and-income-permanent-income-hypothesis">Consumption and Income (Permanent Income Hypothesis)</a></li>
+  <li><a href="#monetary-equilibrium-money-prices-and-income" id="toc-monetary-equilibrium-money-prices-and-income" class="nav-link" data-scroll-target="#monetary-equilibrium-money-prices-and-income">Monetary Equilibrium (Money, Prices, and Income)</a></li>
+  <li><a href="#term-structure-of-interest-rates" id="toc-term-structure-of-interest-rates" class="nav-link" data-scroll-target="#term-structure-of-interest-rates">Term Structure of Interest Rates</a></li>
+  <li><a href="#purchasing-power-parity-ppp" id="toc-purchasing-power-parity-ppp" class="nav-link" data-scroll-target="#purchasing-power-parity-ppp">Purchasing Power Parity (PPP)</a></li>
+  <li><a href="#cointegration-engle-and-granger-1987" id="toc-cointegration-engle-and-granger-1987" class="nav-link" data-scroll-target="#cointegration-engle-and-granger-1987">Cointegration (Engle and Granger, 1987)</a></li>
+  <li><a href="#non-uniqueness-and-normalization-of-cointegrating-vectors" id="toc-non-uniqueness-and-normalization-of-cointegrating-vectors" class="nav-link" data-scroll-target="#non-uniqueness-and-normalization-of-cointegrating-vectors">Non-Uniqueness and Normalization of Cointegrating Vectors</a></li>
+  <li><a href="#cointegrating-rank" id="toc-cointegrating-rank" class="nav-link" data-scroll-target="#cointegrating-rank">Cointegrating Rank</a></li>
+  <li><a href="#cointegrating-rank-interpretation" id="toc-cointegrating-rank-interpretation" class="nav-link" data-scroll-target="#cointegrating-rank-interpretation">Cointegrating Rank: Interpretation</a></li>
+  <li><a href="#cointegration-and-common-stochastic-trends" id="toc-cointegration-and-common-stochastic-trends" class="nav-link" data-scroll-target="#cointegration-and-common-stochastic-trends">Cointegration and Common Stochastic Trends</a></li>
+  <li><a href="#cointegration-and-error-correction-models" id="toc-cointegration-and-error-correction-models" class="nav-link" data-scroll-target="#cointegration-and-error-correction-models">Cointegration and Error Correction Models</a></li>
+  <li><a href="#error-correction-model-general-form" id="toc-error-correction-model-general-form" class="nav-link" data-scroll-target="#error-correction-model-general-form">Error Correction Model: General Form</a></li>
+  <li><a href="#implementing-an-ecm-in-practice-englegranger" id="toc-implementing-an-ecm-in-practice-englegranger" class="nav-link" data-scroll-target="#implementing-an-ecm-in-practice-englegranger">Implementing an ECM in Practice (Engle–Granger)</a></li>
+  <li><a href="#cointegration-test-englegranger" id="toc-cointegration-test-englegranger" class="nav-link" data-scroll-target="#cointegration-test-englegranger">Cointegration Test: Engle–Granger</a></li>
+  <li><a href="#a-limitation-of-the-englegranger-approach" id="toc-a-limitation-of-the-englegranger-approach" class="nav-link" data-scroll-target="#a-limitation-of-the-englegranger-approach">A Limitation of the Engle–Granger Approach</a>
+  <ul class="collapse">
+  <li><a href="#why-test-outcomes-may-differ" id="toc-why-test-outcomes-may-differ" class="nav-link" data-scroll-target="#why-test-outcomes-may-differ">Why test outcomes may differ</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -176,7 +215,7 @@ y_t = \beta x_t + u_t,
 \]</span> where <span class="math inline">\(x_t\)</span> and <span class="math inline">\(y_t\)</span> are nonstationary.</p>
 <p><br></p>
 <p>For example, consider the following two time series observed in levels.</p>
-<div id="d4daaa4a" class="cell" data-message="false" data-execution_count="1">
+<div id="5d587398" class="cell" data-message="false" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -186,7 +225,7 @@ y_t = \beta x_t + u_t,
 </div>
 </div>
 <div class="fragment">
-<div id="d7bf7749" class="cell" data-message="false" data-execution_count="2">
+<div id="8f2a9850" class="cell" data-message="false" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <pre><code>
 
@@ -256,7 +295,7 @@ y_t = \beta x_t + u_t.
 </section>
 <section id="illustration-independent-persistent-series" class="level2">
 <h2 class="anchored" data-anchor-id="illustration-independent-persistent-series">Illustration: Independent Persistent Series</h2>
-<div id="a9e7f784" class="cell" data-message="false" data-execution_count="3">
+<div id="6c29cc51" class="cell" data-message="false" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -266,7 +305,7 @@ y_t = \beta x_t + u_t.
 </div>
 </div>
 <div class="fragment">
-<div id="6b9fd6a6" class="cell" data-execution_count="4">
+<div id="5e213024" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <pre><code>
 
@@ -280,7 +319,7 @@ y_t = \beta x_t + u_t.
 <hr>
 <section id="r-squared" class="level3">
 <h3 class="anchored" data-anchor-id="r-squared">R-squared</h3>
-<div id="0b225b7a" class="cell" data-message="false" data-execution_count="5">
+<div id="e34b7bf3" class="cell" data-message="false" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -293,7 +332,7 @@ y_t = \beta x_t + u_t.
 </section>
 <section id="regression-residuals" class="level3">
 <h3 class="anchored" data-anchor-id="regression-residuals">Regression Residuals</h3>
-<div id="91ad2617" class="cell" data-message="false" data-execution_count="6">
+<div id="0d5c577b" class="cell" data-message="false" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -334,7 +373,7 @@ x_t = \sum_{i=1}^t u_i,
 </section>
 <section id="illustration-same-data-after-differencing" class="level2">
 <h2 class="anchored" data-anchor-id="illustration-same-data-after-differencing">Illustration: Same Data, After Differencing</h2>
-<div id="6d298415" class="cell" data-message="false" data-results="asis" data-execution_count="7">
+<div id="b38dfdb6" class="cell" data-message="false" data-results="asis" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <pre><code>
 

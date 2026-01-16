@@ -73,7 +73,67 @@ window.Quarto = {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="introduction-to-time-series.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-a-time-series" id="toc-what-is-a-time-series" class="nav-link active" data-scroll-target="#what-is-a-time-series">What Is a Time Series?</a></li>
+  <li><a href="#time-series-vs-cross-sectional-data" id="toc-time-series-vs-cross-sectional-data" class="nav-link" data-scroll-target="#time-series-vs-cross-sectional-data">Time Series vs Cross-Sectional Data</a></li>
+  <li><a href="#cross-sectional-data-reminder" id="toc-cross-sectional-data-reminder" class="nav-link" data-scroll-target="#cross-sectional-data-reminder">Cross-Sectional Data: Reminder</a></li>
+  <li><a href="#why-i.i.d.-fails-for-time-series" id="toc-why-i.i.d.-fails-for-time-series" class="nav-link" data-scroll-target="#why-i.i.d.-fails-for-time-series">Why i.i.d. Fails for Time Series</a></li>
+  <li><a href="#stochastic-processes" id="toc-stochastic-processes" class="nav-link" data-scroll-target="#stochastic-processes">Stochastic Processes</a></li>
+  <li><a href="#nature-of-time-series-data" id="toc-nature-of-time-series-data" class="nav-link" data-scroll-target="#nature-of-time-series-data">Nature of Time Series Data</a></li>
+  <li><a href="#from-data-to-a-statistical-model" id="toc-from-data-to-a-statistical-model" class="nav-link" data-scroll-target="#from-data-to-a-statistical-model">From Data to a Statistical Model</a></li>
+  <li><a href="#measures-of-dependence" id="toc-measures-of-dependence" class="nav-link" data-scroll-target="#measures-of-dependence">Measures of Dependence</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
+  <li><a href="#measures-of-dependence-1" id="toc-measures-of-dependence-1" class="nav-link" data-scroll-target="#measures-of-dependence-1">Measures of Dependence</a></li>
+  <li><a href="#stationary-time-series" id="toc-stationary-time-series" class="nav-link" data-scroll-target="#stationary-time-series">Stationary Time Series</a>
+  <ul class="collapse">
+  <li><a href="#implications-of-strict-stationarity" id="toc-implications-of-strict-stationarity" class="nav-link" data-scroll-target="#implications-of-strict-stationarity">Implications of Strict Stationarity:</a></li>
+  </ul></li>
+  <li><a href="#stationary-time-series-1" id="toc-stationary-time-series-1" class="nav-link" data-scroll-target="#stationary-time-series-1">Stationary Time Series</a></li>
+  <li><a href="#examples-1" id="toc-examples-1" class="nav-link" data-scroll-target="#examples-1">Examples</a></li>
+  <li><a href="#jointly-stationary-time-series" id="toc-jointly-stationary-time-series" class="nav-link" data-scroll-target="#jointly-stationary-time-series">Jointly Stationary Time Series</a></li>
+  <li><a href="#prediction-using-cross-correlation" id="toc-prediction-using-cross-correlation" class="nav-link" data-scroll-target="#prediction-using-cross-correlation">Prediction Using Cross-Correlation</a></li>
+  <li><a href="#linear-processes" id="toc-linear-processes" class="nav-link" data-scroll-target="#linear-processes">Linear Processes</a></li>
+  <li><a href="#gaussian-processes" id="toc-gaussian-processes" class="nav-link" data-scroll-target="#gaussian-processes">Gaussian Processes</a></li>
+  <li><a href="#from-population-quantities-to-sample-estimates" id="toc-from-population-quantities-to-sample-estimates" class="nav-link" data-scroll-target="#from-population-quantities-to-sample-estimates">From Population Quantities to Sample Estimates</a></li>
+  <li><a href="#moments-estimation" id="toc-moments-estimation" class="nav-link" data-scroll-target="#moments-estimation">Moments Estimation</a></li>
+  <li><a href="#moments-estimation-1" id="toc-moments-estimation-1" class="nav-link" data-scroll-target="#moments-estimation-1">Moments Estimation</a></li>
+  <li><a href="#sample-acf-under-no-dependence" id="toc-sample-acf-under-no-dependence" class="nav-link" data-scroll-target="#sample-acf-under-no-dependence">Sample ACF Under No Dependence</a></li>
+  <li><a href="#sampling-variability-of-the-acf-white-noise" id="toc-sampling-variability-of-the-acf-white-noise" class="nav-link" data-scroll-target="#sampling-variability-of-the-acf-white-noise">Sampling Variability of the ACF (White Noise)</a></li>
+  <li><a href="#example-acf-of-a-speech-signal" id="toc-example-acf-of-a-speech-signal" class="nav-link" data-scroll-target="#example-acf-of-a-speech-signal">Example: ACF of a Speech Signal</a></li>
+  <li><a href="#sample-cross-covariance-and-cross-correlation" id="toc-sample-cross-covariance-and-cross-correlation" class="nav-link" data-scroll-target="#sample-cross-covariance-and-cross-correlation">Sample Cross-Covariance and Cross-Correlation</a></li>
+  <li><a href="#example-soi-and-recruitment" id="toc-example-soi-and-recruitment" class="nav-link" data-scroll-target="#example-soi-and-recruitment">Example: SOI and Recruitment</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a>
+  <ul class="collapse">
+  <li><a href="#can-we-interpret-the-sample-ccf-as-evidence-of-dependence" id="toc-can-we-interpret-the-sample-ccf-as-evidence-of-dependence" class="nav-link" data-scroll-target="#can-we-interpret-the-sample-ccf-as-evidence-of-dependence"><span style="font-size:1.3em;"><em>Can we interpret the sample CCF as evidence of dependence?</em></span></a></li>
+  </ul></li>
+  <li><a href="#not-really" id="toc-not-really" class="nav-link" data-scroll-target="#not-really">Not Really…</a></li>
+  <li><a href="#spurious-cross-correlation-and-prewhitening" id="toc-spurious-cross-correlation-and-prewhitening" class="nav-link" data-scroll-target="#spurious-cross-correlation-and-prewhitening">Spurious Cross-Correlation and Prewhitening</a></li>
+  <li><a href="#vector-valued-series" id="toc-vector-valued-series" class="nav-link" data-scroll-target="#vector-valued-series">Vector-Valued Series</a></li>
+  <li><a href="#mean-vector-and-covariance-structure" id="toc-mean-vector-and-covariance-structure" class="nav-link" data-scroll-target="#mean-vector-and-covariance-structure">Mean Vector and Covariance Structure</a></li>
+  <li><a href="#sample-covariance-structure" id="toc-sample-covariance-structure" class="nav-link" data-scroll-target="#sample-covariance-structure">Sample Covariance Structure</a></li>
+  <li><a href="#a-brief-digression-multidimensional-series" id="toc-a-brief-digression-multidimensional-series" class="nav-link" data-scroll-target="#a-brief-digression-multidimensional-series">A Brief Digression: Multidimensional Series</a></li>
+  <li><a href="#soil-surface-temperatures" id="toc-soil-surface-temperatures" class="nav-link" data-scroll-target="#soil-surface-temperatures">Soil Surface Temperatures</a></li>
+  <li><a href="#multidimensional-autocovariance" id="toc-multidimensional-autocovariance" class="nav-link" data-scroll-target="#multidimensional-autocovariance">Multidimensional Autocovariance</a></li>
+  <li><a href="#sample-acf-of-soil-temperature" id="toc-sample-acf-of-soil-temperature" class="nav-link" data-scroll-target="#sample-acf-of-soil-temperature">Sample ACF of Soil Temperature</a></li>
+  <li><a href="#smoothing-in-time-series" id="toc-smoothing-in-time-series" class="nav-link" data-scroll-target="#smoothing-in-time-series">Smoothing in Time Series</a>
+  <ul class="collapse">
+  <li><a href="#moving-average-smoother" id="toc-moving-average-smoother" class="nav-link" data-scroll-target="#moving-average-smoother">Moving average smoother</a></li>
+  </ul></li>
+  <li><a href="#smoothing-in-time-series-1" id="toc-smoothing-in-time-series-1" class="nav-link" data-scroll-target="#smoothing-in-time-series-1">Smoothing in Time Series</a>
+  <ul class="collapse">
+  <li><a href="#kernel-smoothing" id="toc-kernel-smoothing" class="nav-link" data-scroll-target="#kernel-smoothing">Kernel smoothing</a></li>
+  </ul></li>
+  <li><a href="#smoothing-in-time-series-2" id="toc-smoothing-in-time-series-2" class="nav-link" data-scroll-target="#smoothing-in-time-series-2">Smoothing in Time Series</a>
+  <ul class="collapse">
+  <li><a href="#lowess-locally-weighted-scatterplot-smoothing" id="toc-lowess-locally-weighted-scatterplot-smoothing" class="nav-link" data-scroll-target="#lowess-locally-weighted-scatterplot-smoothing">LOWESS (LOcally WEighted Scatterplot Smoothing)</a></li>
+  </ul></li>
+  <li><a href="#smoothing-one-series-as-a-function-of-another" id="toc-smoothing-one-series-as-a-function-of-another" class="nav-link" data-scroll-target="#smoothing-one-series-as-a-function-of-another">Smoothing One Series as a Function of Another</a></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -217,7 +277,7 @@ x_t = X_t(\omega), \qquad t = 1, \ldots, T.
 </section>
 <section id="nature-of-time-series-data" class="level2">
 <h2 class="anchored" data-anchor-id="nature-of-time-series-data">Nature of Time Series Data</h2>
-<div id="35cbdf37" class="cell" data-execution_count="3">
+<div id="68fafd16" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -569,7 +629,7 @@ y_t = A x_{t-\ell} + w_t,
 <p>Hence, <span class="math inline">\(\gamma_{yx}(h)\)</span> peaks at <span class="math inline">\(h=\ell\)</span> (Why?)</p>
 </div>
 <div class="fragment">
-<div id="fc0b0884" class="cell" data-execution_count="4">
+<div id="ffc8cc51" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -729,7 +789,7 @@ Q_n(a)
 <section id="sample-acf-under-no-dependence" class="level2">
 <h2 class="anchored" data-anchor-id="sample-acf-under-no-dependence">Sample ACF Under No Dependence</h2>
 <p>Even when a time series has <strong>no autocorrelation</strong>, its sample ACF will generally <strong>not be zero</strong>.</p>
-<div id="010be4ba" class="cell" data-fig-height="4" data-execution_count="5">
+<div id="880955ae" class="cell" data-fig-height="4" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -766,7 +826,7 @@ Q_n(a)
 </section>
 <section id="example-acf-of-a-speech-signal" class="level2">
 <h2 class="anchored" data-anchor-id="example-acf-of-a-speech-signal">Example: ACF of a Speech Signal</h2>
-<div id="d90cfc82" class="cell" data-fig-height="4" data-execution_count="6">
+<div id="2bc4edba" class="cell" data-fig-height="4" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -811,7 +871,7 @@ Q_n(a)
 </section>
 <section id="example-soi-and-recruitment" class="level2">
 <h2 class="anchored" data-anchor-id="example-soi-and-recruitment">Example: SOI and Recruitment</h2>
-<div id="60508b91" class="cell" data-fig-height="5" data-execution_count="7">
+<div id="3b8de49c" class="cell" data-fig-height="5" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -863,7 +923,7 @@ x_t = 2\cos\left(\frac{2\pi t}{12}\right) + \varepsilon_t,
 y_t = 2\cos\left(\frac{2\pi (t+5)}{12}\right) + \eta_t,
 \]</span></p>
 <div class="fragment">
-<div id="e7a9ac93" class="cell" data-fig-height="7" data-execution_count="8">
+<div id="41a5bcd7" class="cell" data-fig-height="7" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -978,7 +1038,7 @@ X_{rt}
 </section>
 <section id="soil-surface-temperatures" class="level2">
 <h2 class="anchored" data-anchor-id="soil-surface-temperatures">Soil Surface Temperatures</h2>
-<div id="0d577cec" class="cell" data-fig-height="6.8" data-execution_count="9">
+<div id="febb0f17" class="cell" data-fig-height="6.8" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1045,7 +1105,7 @@ x_{s_1,s_2}.
 </section>
 <section id="sample-acf-of-soil-temperature" class="level2">
 <h2 class="anchored" data-anchor-id="sample-acf-of-soil-temperature">Sample ACF of Soil Temperature</h2>
-<div id="d534c8ff" class="cell" data-execution_count="10">
+<div id="ce9e795e" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1061,7 +1121,7 @@ x_{s_1,s_2}.
 <section id="moving-average-smoother" class="level3">
 <h3 class="anchored" data-anchor-id="moving-average-smoother">Moving average smoother</h3>
 <p><span class="math display">\[m_t = \sum_{j=-k}^{k} a_j x_{t-j},\]</span> where <span class="math inline">\(a_j = a_{-j}\)</span> and <span class="math inline">\(\sum_{j=-k}^{k} a_j = 1\)</span> is a symmetric moving average of the data.</p>
-<div id="8b770654" class="cell" data-execution_count="11">
+<div id="c59271b2" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1089,7 +1149,7 @@ K(z)
 =
 (2\pi)^{-1/2}\,\exp\!\left(- z^2/2 \right).
 \]</span></p>
-<div id="b602acee" class="cell" data-execution_count="12">
+<div id="e07ea0ff" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1107,7 +1167,7 @@ K(z)
 <ul>
 <li>A local-regression method that uses only <span class="math inline">\(\{x_{t-k/2}, \ldots, x_t, \ldots, x_{t+k/2}\}\)</span> to predict <span class="math inline">\(x_t\)</span>, and then sets <span class="math inline">\(m_t = \hat x_t\)</span></li>
 </ul>
-<div id="ca7598f3" class="cell" data-execution_count="13">
+<div id="d966c17a" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1121,7 +1181,7 @@ K(z)
 <section id="smoothing-one-series-as-a-function-of-another" class="level2">
 <h2 class="anchored" data-anchor-id="smoothing-one-series-as-a-function-of-another">Smoothing One Series as a Function of Another</h2>
 <p>We smooth a scatterplot of <strong>mortality</strong> <span class="math inline">\((M_t)\)</span> as a function of <strong>temperature</strong> <span class="math inline">\((T_t)\)</span> using LOWESS.</p>
-<div id="4714b7f3" class="cell" data-fig-height="5.5" data-fig-width="9" data-execution_count="14">
+<div id="1aefd89c" class="cell" data-fig-height="5.5" data-fig-width="9" data-execution_count="14">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

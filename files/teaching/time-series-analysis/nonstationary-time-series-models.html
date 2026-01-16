@@ -111,7 +111,77 @@ window.Quarto = {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="nonstationary-time-series-models.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-do-we-mean-by-nonstationarity" id="toc-what-do-we-mean-by-nonstationarity" class="nav-link active" data-scroll-target="#what-do-we-mean-by-nonstationarity">What Do We Mean by Nonstationarity?</a>
+  <ul class="collapse">
+  <li><a href="#sources-of-nonstationarity" id="toc-sources-of-nonstationarity" class="nav-link" data-scroll-target="#sources-of-nonstationarity">Sources of Nonstationarity</a></li>
+  </ul></li>
+  <li><a href="#a-canonical-example-of-a-unit-root-process" id="toc-a-canonical-example-of-a-unit-root-process" class="nav-link" data-scroll-target="#a-canonical-example-of-a-unit-root-process">A Canonical Example of a Unit Root Process</a></li>
+  <li><a href="#dynamics-of-a-unit-root-process" id="toc-dynamics-of-a-unit-root-process" class="nav-link" data-scroll-target="#dynamics-of-a-unit-root-process">Dynamics of a Unit Root Process</a>
+  <ul class="collapse">
+  <li><a href="#accumulation-of-shocks" id="toc-accumulation-of-shocks" class="nav-link" data-scroll-target="#accumulation-of-shocks">Accumulation of shocks</a></li>
+  <li><a href="#permanent-effects" id="toc-permanent-effects" class="nav-link" data-scroll-target="#permanent-effects">Permanent effects</a></li>
+  <li><a href="#no-stable-long-run-mean" id="toc-no-stable-long-run-mean" class="nav-link" data-scroll-target="#no-stable-long-run-mean">No stable long-run mean</a></li>
+  </ul></li>
+  <li><a href="#random-walk" id="toc-random-walk" class="nav-link" data-scroll-target="#random-walk">Random Walk</a></li>
+  <li><a href="#order-of-integration" id="toc-order-of-integration" class="nav-link" data-scroll-target="#order-of-integration">Order of Integration</a>
+  <ul class="collapse">
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation:</a></li>
+  </ul></li>
+  <li><a href="#arima-models" id="toc-arima-models" class="nav-link" data-scroll-target="#arima-models">ARIMA Models</a></li>
+  <li><a href="#testing-for-unit-roots" id="toc-testing-for-unit-roots" class="nav-link" data-scroll-target="#testing-for-unit-roots">Testing for Unit Roots</a></li>
+  <li><a href="#unit-root-asymptotics" id="toc-unit-root-asymptotics" class="nav-link" data-scroll-target="#unit-root-asymptotics">Unit Root Asymptotics</a></li>
+  <li><a href="#unit-root-asymptotics-1" id="toc-unit-root-asymptotics-1" class="nav-link" data-scroll-target="#unit-root-asymptotics-1">Unit Root Asymptotics</a></li>
+  <li><a href="#asymptotics-of-the-ols-estimator-unit-root-case" id="toc-asymptotics-of-the-ols-estimator-unit-root-case" class="nav-link" data-scroll-target="#asymptotics-of-the-ols-estimator-unit-root-case">Asymptotics of the OLS Estimator (Unit Root Case)</a></li>
+  <li><a href="#limit-distribution-of-hatrho-dickeyfuller" id="toc-limit-distribution-of-hatrho-dickeyfuller" class="nav-link" data-scroll-target="#limit-distribution-of-hatrho-dickeyfuller">Limit Distribution of <span class="math inline">\(\hat\rho\)</span> (Dickey–Fuller)</a></li>
+  <li><a href="#dickeyfuller-test" id="toc-dickeyfuller-test" class="nav-link" data-scroll-target="#dickeyfuller-test">Dickey–Fuller Test:</a></li>
+  <li><a href="#augmented-dickeyfuller" id="toc-augmented-dickeyfuller" class="nav-link" data-scroll-target="#augmented-dickeyfuller">Augmented Dickey–Fuller</a></li>
+  <li><a href="#multiple-unit-roots" id="toc-multiple-unit-roots" class="nav-link" data-scroll-target="#multiple-unit-roots">Multiple Unit Roots</a></li>
+  <li><a href="#a-formal-approach-dickeypantula-testing" id="toc-a-formal-approach-dickeypantula-testing" class="nav-link" data-scroll-target="#a-formal-approach-dickeypantula-testing">A Formal Approach: Dickey–Pantula Testing</a></li>
+  <li><a href="#testing-for-multiple-unit-roots-dickeypantula" id="toc-testing-for-multiple-unit-roots-dickeypantula" class="nav-link" data-scroll-target="#testing-for-multiple-unit-roots-dickeypantula">Testing for Multiple Unit Roots (Dickey–Pantula)</a>
+  <ul class="collapse">
+  <li><a href="#step-1-test-for-two-unit-roots-i2" id="toc-step-1-test-for-two-unit-roots-i2" class="nav-link" data-scroll-target="#step-1-test-for-two-unit-roots-i2">Step 1: Test for two unit roots (<span class="math inline">\(I(2)\)</span>)</a></li>
+  <li><a href="#step-2-test-for-one-unit-root-i1" id="toc-step-2-test-for-one-unit-root-i1" class="nav-link" data-scroll-target="#step-2-test-for-one-unit-root-i1">Step 2: Test for one unit root (<span class="math inline">\(I(1)\)</span>)</a></li>
+  </ul></li>
+  <li><a href="#remarks-on-dickeypantula-testing" id="toc-remarks-on-dickeypantula-testing" class="nav-link" data-scroll-target="#remarks-on-dickeypantula-testing">Remarks on Dickey–Pantula Testing</a>
+  <ul class="collapse">
+  <li><a href="#key-assumptions" id="toc-key-assumptions" class="nav-link" data-scroll-target="#key-assumptions">Key assumptions</a></li>
+  <li><a href="#practical-interpretation" id="toc-practical-interpretation" class="nav-link" data-scroll-target="#practical-interpretation">Practical interpretation</a></li>
+  </ul></li>
+  <li><a href="#example-arima-modeling-of-u.s.-real-gdp-fred" id="toc-example-arima-modeling-of-u.s.-real-gdp-fred" class="nav-link" data-scroll-target="#example-arima-modeling-of-u.s.-real-gdp-fred">Example: ARIMA Modeling of U.S. Real GDP (FRED)</a>
+  <ul class="collapse">
+  <li><a href="#augmented-dickeyfuller-test-u.s.-real-gdp" id="toc-augmented-dickeyfuller-test-u.s.-real-gdp" class="nav-link" data-scroll-target="#augmented-dickeyfuller-test-u.s.-real-gdp">Augmented Dickey–Fuller Test (U.S. Real GDP)</a></li>
+  <li><a href="#acf-and-pacf-of-delta-logtextgdp" id="toc-acf-and-pacf-of-delta-logtextgdp" class="nav-link" data-scroll-target="#acf-and-pacf-of-delta-logtextgdp">ACF and PACF of <span class="math inline">\(\Delta \log(\text{GDP})\)</span></a></li>
+  <li><a href="#estimation" id="toc-estimation" class="nav-link" data-scroll-target="#estimation">Estimation</a></li>
+  <li><a href="#estimation-1" id="toc-estimation-1" class="nav-link" data-scroll-target="#estimation-1">Estimation</a></li>
+  <li><a href="#diagnostics" id="toc-diagnostics" class="nav-link" data-scroll-target="#diagnostics">Diagnostics</a></li>
+  <li><a href="#diagnostics-1" id="toc-diagnostics-1" class="nav-link" data-scroll-target="#diagnostics-1">Diagnostics</a></li>
+  </ul></li>
+  <li><a href="#forecasting-with-arima-models" id="toc-forecasting-with-arima-models" class="nav-link" data-scroll-target="#forecasting-with-arima-models">Forecasting with ARIMA Models</a></li>
+  <li><a href="#a-key-assumption-behind-forecasting" id="toc-a-key-assumption-behind-forecasting" class="nav-link" data-scroll-target="#a-key-assumption-behind-forecasting">A Key Assumption Behind Forecasting</a></li>
+  <li><a href="#what-does-an-arima-forecast-deliver" id="toc-what-does-an-arima-forecast-deliver" class="nav-link" data-scroll-target="#what-does-an-arima-forecast-deliver">What Does an ARIMA Forecast Deliver?</a></li>
+  <li><a href="#forecasting-u.s.-real-gdp" id="toc-forecasting-u.s.-real-gdp" class="nav-link" data-scroll-target="#forecasting-u.s.-real-gdp">Forecasting U.S. Real GDP</a>
+  <ul class="collapse">
+  <li><a href="#point-forecast" id="toc-point-forecast" class="nav-link" data-scroll-target="#point-forecast">Point Forecast</a></li>
+  <li><a href="#forecast-uncertainty" id="toc-forecast-uncertainty" class="nav-link" data-scroll-target="#forecast-uncertainty">Forecast Uncertainty</a></li>
+  <li><a href="#prediction-intervals" id="toc-prediction-intervals" class="nav-link" data-scroll-target="#prediction-intervals">Prediction Intervals</a></li>
+  <li><a href="#out-of-sample-forecast" id="toc-out-of-sample-forecast" class="nav-link" data-scroll-target="#out-of-sample-forecast">Out-of-Sample Forecast</a></li>
+  </ul></li>
+  <li><a href="#forecast-evaluation" id="toc-forecast-evaluation" class="nav-link" data-scroll-target="#forecast-evaluation">Forecast Evaluation</a></li>
+  <li><a href="#expected-squared-forecast-error" id="toc-expected-squared-forecast-error" class="nav-link" data-scroll-target="#expected-squared-forecast-error">Expected Squared Forecast Error</a></li>
+  <li><a href="#biasvariance-decomposition-forecasting" id="toc-biasvariance-decomposition-forecasting" class="nav-link" data-scroll-target="#biasvariance-decomposition-forecasting">Bias–Variance Decomposition (Forecasting)</a></li>
+  <li><a href="#empirical-forecast-evaluation" id="toc-empirical-forecast-evaluation" class="nav-link" data-scroll-target="#empirical-forecast-evaluation">Empirical Forecast Evaluation</a></li>
+  <li><a href="#remark-on-forecast-evaluation" id="toc-remark-on-forecast-evaluation" class="nav-link" data-scroll-target="#remark-on-forecast-evaluation">Remark on Forecast Evaluation</a>
+  <ul class="collapse">
+  <li><a href="#what-this-means-in-practice" id="toc-what-this-means-in-practice" class="nav-link" data-scroll-target="#what-this-means-in-practice">What This Means in Practice</a></li>
+  </ul></li>
+  <li><a href="#arima-models-a-historical-perspective-on-forecasting" id="toc-arima-models-a-historical-perspective-on-forecasting" class="nav-link" data-scroll-target="#arima-models-a-historical-perspective-on-forecasting">ARIMA Models: A Historical Perspective on Forecasting</a></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -243,7 +313,7 @@ x_{t+h} = x_t + \sum_{j=1}^h \varepsilon_{t+j},
 <section id="random-walk" class="level2">
 <h2 class="anchored" data-anchor-id="random-walk">Random Walk</h2>
 <p>When a unit root process is AR(1), it is also referred to as a <strong>random walk</strong>.</p>
-<div id="6449a645" class="cell" data-execution_count="1">
+<div id="6eec8f17" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -607,7 +677,7 @@ H_0:\ \beta_2 = 0.
 </section>
 <section id="example-arima-modeling-of-u.s.-real-gdp-fred" class="level2">
 <h2 class="anchored" data-anchor-id="example-arima-modeling-of-u.s.-real-gdp-fred">Example: ARIMA Modeling of U.S. Real GDP (FRED)</h2>
-<div id="0b071d4f" class="cell" data-execution_count="2">
+<div id="4715ed34" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -634,7 +704,7 @@ H_0:\ \rho = 1
 H_1:\ \rho &lt; 1
 \]</span></p>
 <p>Rejection occurs when the test statistic is <strong>more negative</strong> than the Dickey–Fuller critical value.</p>
-<div id="119a81b8" class="cell" data-execution_count="3">
+<div id="e8f9eaa5" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>ADF test (levels, with intercept)
  Test statistic (tau):  -2.025 
@@ -649,7 +719,7 @@ H_1:\ \rho &lt; 1
 </section>
 <section id="acf-and-pacf-of-delta-logtextgdp" class="level3">
 <h3 class="anchored" data-anchor-id="acf-and-pacf-of-delta-logtextgdp">ACF and PACF of <span class="math inline">\(\Delta \log(\text{GDP})\)</span></h3>
-<div id="e7bfa281" class="cell" data-execution_count="4">
+<div id="d7b78954" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -663,7 +733,7 @@ H_1:\ \rho &lt; 1
 <section id="estimation" class="level3">
 <h3 class="anchored" data-anchor-id="estimation">Estimation</h3>
 <p><strong>ARIMA(1,1,0)</strong></p>
-<div id="b8079e6e" class="cell" data-execution_count="5">
+<div id="1f0ad513" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">arima</span>(dgdp, <span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>), <span class="at">include.mean =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>fit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -680,7 +750,7 @@ sigma^2 estimated as 7.951e-05:  log likelihood = 897.78,  aic = -1789.55</code>
 </div>
 </div>
 <p><br></p>
-<div id="c08eef40" class="cell" data-execution_count="6">
+<div id="c6c832f1" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(gdp)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>fit110 <span class="ot">&lt;-</span> <span class="fu">arima</span>(gdp, <span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>), <span class="at">xreg =</span> t)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>fit110 </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -708,7 +778,7 @@ sigma^2 estimated as 7.951e-05:  log likelihood = 897.77,  aic = -1789.55</code>
 <section id="estimation-1" class="level3">
 <h3 class="anchored" data-anchor-id="estimation-1">Estimation</h3>
 <p><strong>ARIMA(0,1,2)</strong></p>
-<div id="6e5d9545" class="cell" data-execution_count="7">
+<div id="4c371891" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arima</span>(dgdp, <span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>)) <span class="co"># AR(1)</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">arima</span>(dgdp, <span class="at">order =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>)) <span class="co"># MA(2)</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ARMAtoMA</span>(<span class="at">ar=</span>.<span class="dv">3575</span>, <span class="at">ma=</span><span class="dv">0</span>, <span class="dv">5</span>) <span class="co"># prints psi-weights</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -775,7 +845,7 @@ sigma^2 estimated as 7.805e-05:  log likelihood = 900.27,  aic = -1792.54</code>
 </section>
 <section id="diagnostics-1" class="level3">
 <h3 class="anchored" data-anchor-id="diagnostics-1">Diagnostics</h3>
-<div id="e6e3e2f8" class="cell" data-execution_count="8">
+<div id="d3cc6158" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1006,7 +1076,7 @@ z_{1-\alpha/2}
 </section>
 <section id="out-of-sample-forecast" class="level3">
 <h3 class="anchored" data-anchor-id="out-of-sample-forecast">Out-of-Sample Forecast</h3>
-<div id="1fec8bcd" class="cell" data-execution_count="9">
+<div id="b1f75ca3" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>Out-of-sample evaluation (h = 10 quarters)
 RMSE: 0.0189 

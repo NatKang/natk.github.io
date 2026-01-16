@@ -73,7 +73,86 @@ window.Quarto = {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="vector-autoregressions.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#recall-adl-models" id="toc-recall-adl-models" class="nav-link active" data-scroll-target="#recall-adl-models">Recall: ADL Models</a></li>
+  <li><a href="#a-simple-control-system-analogy" id="toc-a-simple-control-system-analogy" class="nav-link" data-scroll-target="#a-simple-control-system-analogy">A Simple Control-System Analogy</a></li>
+  <li><a href="#large-scale-macroeconometric-models" id="toc-large-scale-macroeconometric-models" class="nav-link" data-scroll-target="#large-scale-macroeconometric-models">Large-Scale Macroeconometric Models</a></li>
+  <li><a href="#symmetric-dynamic-system" id="toc-symmetric-dynamic-system" class="nav-link" data-scroll-target="#symmetric-dynamic-system">Symmetric Dynamic System</a></li>
+  <li><a href="#structural-restrictions-and-reduced-form" id="toc-structural-restrictions-and-reduced-form" class="nav-link" data-scroll-target="#structural-restrictions-and-reduced-form">Structural Restrictions and Reduced Form</a></li>
+  <li><a href="#stability-and-stationarity" id="toc-stability-and-stationarity" class="nav-link" data-scroll-target="#stability-and-stationarity">Stability and Stationarity</a>
+  <ul class="collapse">
+  <li><a href="#consequences-of-stability" id="toc-consequences-of-stability" class="nav-link" data-scroll-target="#consequences-of-stability">Consequences of Stability</a></li>
+  </ul></li>
+  <li><a href="#generalization-to-varp" id="toc-generalization-to-varp" class="nav-link" data-scroll-target="#generalization-to-varp">Generalization to VAR(<span class="math inline">\(p\)</span>)</a></li>
+  <li><a href="#forecasting-in-var-models" id="toc-forecasting-in-var-models" class="nav-link" data-scroll-target="#forecasting-in-var-models">Forecasting in VAR Models</a></li>
+  <li><a href="#forecast-error-variance" id="toc-forecast-error-variance" class="nav-link" data-scroll-target="#forecast-error-variance">Forecast Error Variance</a>
+  <ul class="collapse">
+  <li><a href="#confidence-intervals" id="toc-confidence-intervals" class="nav-link" data-scroll-target="#confidence-intervals">confidence intervals</a></li>
+  </ul></li>
+  <li><a href="#computing-forecast-error-variance-in-practice" id="toc-computing-forecast-error-variance-in-practice" class="nav-link" data-scroll-target="#computing-forecast-error-variance-in-practice">Computing Forecast Error Variance in Practice</a>
+  <ul class="collapse">
+  <li><a href="#var1-recursion-you-can-compute-directly" id="toc-var1-recursion-you-can-compute-directly" class="nav-link" data-scroll-target="#var1-recursion-you-can-compute-directly">VAR(1): recursion you can compute directly</a></li>
+  <li><a href="#varp-same-idea-via-the-companion-form" id="toc-varp-same-idea-via-the-companion-form" class="nav-link" data-scroll-target="#varp-same-idea-via-the-companion-form">VAR(<span class="math inline">\(p\)</span>): same idea via the companion form</a></li>
+  </ul></li>
+  <li><a href="#example-forecasting-in-a-stable-var-simulated-data" id="toc-example-forecasting-in-a-stable-var-simulated-data" class="nav-link" data-scroll-target="#example-forecasting-in-a-stable-var-simulated-data">Example: Forecasting in a Stable VAR (Simulated Data)</a></li>
+  <li><a href="#dimensionality-in-var-models" id="toc-dimensionality-in-var-models" class="nav-link" data-scroll-target="#dimensionality-in-var-models">Dimensionality in VAR Models</a>
+  <ul class="collapse">
+  <li><a href="#consequences" id="toc-consequences" class="nav-link" data-scroll-target="#consequences">Consequences</a></li>
+  <li><a href="#rule-of-thumb" id="toc-rule-of-thumb" class="nav-link" data-scroll-target="#rule-of-thumb">Rule of Thumb</a></li>
+  </ul></li>
+  <li><a href="#estimation-and-inference-of-var-models" id="toc-estimation-and-inference-of-var-models" class="nav-link" data-scroll-target="#estimation-and-inference-of-var-models">Estimation and Inference of VAR Models</a>
+  <ul class="collapse">
+  <li><a href="#inference" id="toc-inference" class="nav-link" data-scroll-target="#inference">Inference</a></li>
+  </ul></li>
+  <li><a href="#what-if-the-variables-are-nonstationary" id="toc-what-if-the-variables-are-nonstationary" class="nav-link" data-scroll-target="#what-if-the-variables-are-nonstationary">What If the Variables Are Nonstationary?</a></li>
+  <li><a href="#cointegration-and-the-vecm" id="toc-cointegration-and-the-vecm" class="nav-link" data-scroll-target="#cointegration-and-the-vecm">Cointegration and the VECM</a></li>
+  <li><a href="#bivariate-example" id="toc-bivariate-example" class="nav-link" data-scroll-target="#bivariate-example">Bivariate Example</a></li>
+  <li><a href="#estimation-of-the-vecm-parameters" id="toc-estimation-of-the-vecm-parameters" class="nav-link" data-scroll-target="#estimation-of-the-vecm-parameters">Estimation of the VECM Parameters</a>
+  <ul class="collapse">
+  <li><a href="#what-needs-to-be-estimated" id="toc-what-needs-to-be-estimated" class="nav-link" data-scroll-target="#what-needs-to-be-estimated">What Needs to Be Estimated</a></li>
+  <li><a href="#implication-for-estimation" id="toc-implication-for-estimation" class="nav-link" data-scroll-target="#implication-for-estimation">Implication for Estimation</a></li>
+  </ul></li>
+  <li><a href="#johansens-approach-partial-out" id="toc-johansens-approach-partial-out" class="nav-link" data-scroll-target="#johansens-approach-partial-out">Johansen’s Approach (Partial Out)</a></li>
+  <li><a href="#johansens-approach-from-longrun-regression-to-eigenvalues" id="toc-johansens-approach-from-longrun-regression-to-eigenvalues" class="nav-link" data-scroll-target="#johansens-approach-from-longrun-regression-to-eigenvalues">Johansen’s Approach (From Long‑Run Regression to Eigenvalues)</a>
+  <ul class="collapse">
+  <li><a href="#derivation-why-the-eigenvalue-problem-appears" id="toc-derivation-why-the-eigenvalue-problem-appears" class="nav-link" data-scroll-target="#derivation-why-the-eigenvalue-problem-appears">Derivation (why the eigenvalue problem appears)</a></li>
+  <li><a href="#step-1-differentiate-w.r.t.-alpha-holding-beta-fixed" id="toc-step-1-differentiate-w.r.t.-alpha-holding-beta-fixed" class="nav-link" data-scroll-target="#step-1-differentiate-w.r.t.-alpha-holding-beta-fixed">Step 1: Differentiate w.r.t. <span class="math inline">\(\alpha\)</span> (holding <span class="math inline">\(\beta\)</span> fixed)</a></li>
+  <li><a href="#step-2-plug-back-to-get-a-problem-in-beta-only" id="toc-step-2-plug-back-to-get-a-problem-in-beta-only" class="nav-link" data-scroll-target="#step-2-plug-back-to-get-a-problem-in-beta-only">Step 2: Plug back to get a problem in <span class="math inline">\(\beta\)</span> only</a></li>
+  <li><a href="#step-3-eigenvalue-characterization" id="toc-step-3-eigenvalue-characterization" class="nav-link" data-scroll-target="#step-3-eigenvalue-characterization">Step 3: Eigenvalue characterization</a></li>
+  </ul></li>
+  <li><a href="#johansens-approach-gaussian-mle-setup" id="toc-johansens-approach-gaussian-mle-setup" class="nav-link" data-scroll-target="#johansens-approach-gaussian-mle-setup">Johansen’s Approach (Gaussian MLE Setup)</a></li>
+  <li><a href="#johansens-approach-profile-likelihood" id="toc-johansens-approach-profile-likelihood" class="nav-link" data-scroll-target="#johansens-approach-profile-likelihood">Johansen’s Approach (Profile Likelihood)</a></li>
+  <li><a href="#johansens-approach-lr-rank-tests" id="toc-johansens-approach-lr-rank-tests" class="nav-link" data-scroll-target="#johansens-approach-lr-rank-tests">Johansen’s Approach (LR Rank Tests)</a>
+  <ul class="collapse">
+  <li><a href="#unrestricted-residual-covariance" id="toc-unrestricted-residual-covariance" class="nav-link" data-scroll-target="#unrestricted-residual-covariance">Unrestricted Residual Covariance</a></li>
+  <li><a href="#restricted-residual-covariance" id="toc-restricted-residual-covariance" class="nav-link" data-scroll-target="#restricted-residual-covariance">Restricted Residual Covariance</a></li>
+  <li><a href="#determinant-of-unrestricted-residual-covariance-widehatsigma_k" id="toc-determinant-of-unrestricted-residual-covariance-widehatsigma_k" class="nav-link" data-scroll-target="#determinant-of-unrestricted-residual-covariance-widehatsigma_k">Determinant of Unrestricted Residual Covariance: <span class="math inline">\(|\widehat\Sigma_K|\)</span></a></li>
+  <li><a href="#determinant-of-restricted-residual-covariance-widehatsigma_r" id="toc-determinant-of-restricted-residual-covariance-widehatsigma_r" class="nav-link" data-scroll-target="#determinant-of-restricted-residual-covariance-widehatsigma_r">Determinant of Restricted Residual Covariance: <span class="math inline">\(|\widehat\Sigma_r|\)</span></a></li>
+  <li><a href="#eigenstructure-of-cp_rc" id="toc-eigenstructure-of-cp_rc" class="nav-link" data-scroll-target="#eigenstructure-of-cp_rc">Eigenstructure of <span class="math inline">\(CP_rC'\)</span></a></li>
+  </ul></li>
+  <li><a href="#johansens-likelihood-ratio-tests-for-cointegration-rank" id="toc-johansens-likelihood-ratio-tests-for-cointegration-rank" class="nav-link" data-scroll-target="#johansens-likelihood-ratio-tests-for-cointegration-rank">Johansen’s Likelihood Ratio Tests for Cointegration Rank</a>
+  <ul class="collapse">
+  <li><a href="#two-lr-tests-what-is-being-tested" id="toc-two-lr-tests-what-is-being-tested" class="nav-link" data-scroll-target="#two-lr-tests-what-is-being-tested">Two LR Tests: What Is Being Tested?</a></li>
+  </ul></li>
+  <li><a href="#johansens-approach-summary" id="toc-johansens-approach-summary" class="nav-link" data-scroll-target="#johansens-approach-summary">Johansen’s Approach — Summary</a></li>
+  <li><a href="#johansen-vs.-englegranger-what-is-different" id="toc-johansen-vs.-englegranger-what-is-different" class="nav-link" data-scroll-target="#johansen-vs.-englegranger-what-is-different">Johansen vs.&nbsp;Engle–Granger (What Is Different?)</a></li>
+  <li><a href="#model-selection-and-diagnostics" id="toc-model-selection-and-diagnostics" class="nav-link" data-scroll-target="#model-selection-and-diagnostics">Model Selection and Diagnostics</a></li>
+  <li><a href="#testing-adjustment-in-a-vecm-restrictions-on-alpha" id="toc-testing-adjustment-in-a-vecm-restrictions-on-alpha" class="nav-link" data-scroll-target="#testing-adjustment-in-a-vecm-restrictions-on-alpha">Testing Adjustment in a VECM: Restrictions on <span class="math inline">\(\alpha\)</span></a>
+  <ul class="collapse">
+  <li><a href="#general-form-linear-restrictions" id="toc-general-form-linear-restrictions" class="nav-link" data-scroll-target="#general-form-linear-restrictions">General Form: Linear Restrictions</a></li>
+  <li><a href="#inference-1" id="toc-inference-1" class="nav-link" data-scroll-target="#inference-1">Inference</a></li>
+  </ul></li>
+  <li><a href="#example-a-small-open-economy" id="toc-example-a-small-open-economy" class="nav-link" data-scroll-target="#example-a-small-open-economy">Example: A Small Open Economy</a>
+  <ul class="collapse">
+  <li><a href="#a-meaningful-restriction" id="toc-a-meaningful-restriction" class="nav-link" data-scroll-target="#a-meaningful-restriction">A meaningful restriction</a></li>
+  </ul></li>
+  <li><a href="#summary-what-vars-and-vecms-do-and-do-not-do" id="toc-summary-what-vars-and-vecms-do-and-do-not-do" class="nav-link" data-scroll-target="#summary-what-vars-and-vecms-do-and-do-not-do">Summary: What VARs and VECMs Do — and Do Not Do</a></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -477,7 +556,7 @@ J=\begin{bmatrix} I_K &amp; 0 &amp; \cdots &amp; 0 \end{bmatrix}.
 <li>Forecasts are produced recursively from the VAR</li>
 <li>Confidence intervals reflect uncertainty from future shocks</li>
 </ul>
-<div id="18293da8" class="cell" data-execution_count="1">
+<div id="3c897af9" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

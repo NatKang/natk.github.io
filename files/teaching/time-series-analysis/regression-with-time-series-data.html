@@ -111,7 +111,50 @@ window.Quarto = {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="regression-with-time-series-data.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-we-have-modeled-so-far" id="toc-what-we-have-modeled-so-far" class="nav-link active" data-scroll-target="#what-we-have-modeled-so-far">What We Have Modeled So Far</a></li>
+  <li><a href="#what-arima-leaves-out" id="toc-what-arima-leaves-out" class="nav-link" data-scroll-target="#what-arima-leaves-out">What ARIMA Leaves Out</a></li>
+  <li><a href="#regression-with-time-series-data" id="toc-regression-with-time-series-data" class="nav-link" data-scroll-target="#regression-with-time-series-data">Regression with Time Series Data</a></li>
+  <li><a href="#estimation-via-ols" id="toc-estimation-via-ols" class="nav-link" data-scroll-target="#estimation-via-ols">Estimation via OLS</a></li>
+  <li><a href="#unbiasedness-what-it-would-take" id="toc-unbiasedness-what-it-would-take" class="nav-link" data-scroll-target="#unbiasedness-what-it-would-take">Unbiasedness: What It Would Take</a>
+  <ul class="collapse">
+  <li><a href="#is-this-assumption-reasonable" id="toc-is-this-assumption-reasonable" class="nav-link" data-scroll-target="#is-this-assumption-reasonable">Is This Assumption Reasonable?</a></li>
+  </ul></li>
+  <li><a href="#consistency" id="toc-consistency" class="nav-link" data-scroll-target="#consistency">Consistency</a></li>
+  <li><a href="#what-needs-to-converge" id="toc-what-needs-to-converge" class="nav-link" data-scroll-target="#what-needs-to-converge">What Needs to Converge?</a>
+  <ul class="collapse">
+  <li><a href="#stationarity-and-ergodicity" id="toc-stationarity-and-ergodicity" class="nav-link" data-scroll-target="#stationarity-and-ergodicity">Stationarity and Ergodicity</a></li>
+  </ul></li>
+  <li><a href="#whats-needed-for-inference" id="toc-whats-needed-for-inference" class="nav-link" data-scroll-target="#whats-needed-for-inference">What’s Needed for Inference?</a></li>
+  <li><a href="#a-clt-for-sum-x_t-u_t" id="toc-a-clt-for-sum-x_t-u_t" class="nav-link" data-scroll-target="#a-clt-for-sum-x_t-u_t">A CLT for <span class="math inline">\(\sum x_t u_t\)</span></a></li>
+  <li><a href="#long-run-variance" id="toc-long-run-variance" class="nav-link" data-scroll-target="#long-run-variance">Long-Run Variance</a></li>
+  <li><a href="#asymptotic-distribution-of-ols" id="toc-asymptotic-distribution-of-ols" class="nav-link" data-scroll-target="#asymptotic-distribution-of-ols">Asymptotic Distribution of OLS</a></li>
+  <li><a href="#special-case-martingale-difference-sequence" id="toc-special-case-martingale-difference-sequence" class="nav-link" data-scroll-target="#special-case-martingale-difference-sequence">Special Case: Martingale Difference Sequence</a>
+  <ul class="collapse">
+  <li><a href="#further-restriction-homoskedastic-errors" id="toc-further-restriction-homoskedastic-errors" class="nav-link" data-scroll-target="#further-restriction-homoskedastic-errors">Further Restriction: Homoskedastic Errors</a></li>
+  </ul></li>
+  <li><a href="#estimating-the-long-run-variance-hac" id="toc-estimating-the-long-run-variance-hac" class="nav-link" data-scroll-target="#estimating-the-long-run-variance-hac">Estimating the Long-Run Variance (HAC)</a></li>
+  <li><a href="#why-truncation-and-weights" id="toc-why-truncation-and-weights" class="nav-link" data-scroll-target="#why-truncation-and-weights">Why Truncation and Weights?</a></li>
+  <li><a href="#contemporaneous-regression" id="toc-contemporaneous-regression" class="nav-link" data-scroll-target="#contemporaneous-regression">Contemporaneous Regression</a></li>
+  <li><a href="#dynamic-regression-models" id="toc-dynamic-regression-models" class="nav-link" data-scroll-target="#dynamic-regression-models">Dynamic Regression Models</a></li>
+  <li><a href="#a-simple-dynamic-regression" id="toc-a-simple-dynamic-regression" class="nav-link" data-scroll-target="#a-simple-dynamic-regression">A Simple Dynamic Regression</a></li>
+  <li><a href="#impact-and-dynamic-responses" id="toc-impact-and-dynamic-responses" class="nav-link" data-scroll-target="#impact-and-dynamic-responses">Impact and Dynamic Responses</a></li>
+  <li><a href="#impulse-response-function" id="toc-impulse-response-function" class="nav-link" data-scroll-target="#impulse-response-function">Impulse Response Function</a></li>
+  <li><a href="#long-run-effect" id="toc-long-run-effect" class="nav-link" data-scroll-target="#long-run-effect">Long-Run Effect</a></li>
+  <li><a href="#long-run-multiplier-in-general-adl-models" id="toc-long-run-multiplier-in-general-adl-models" class="nav-link" data-scroll-target="#long-run-multiplier-in-general-adl-models">Long-Run Multiplier in General ADL Models</a></li>
+  <li><a href="#empirical-example-inflation-and-unemployment-adl" id="toc-empirical-example-inflation-and-unemployment-adl" class="nav-link" data-scroll-target="#empirical-example-inflation-and-unemployment-adl">Empirical Example: Inflation and Unemployment (ADL)</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#impulse-response-of-inflation-to-a-one-unit-increase-in-unemployment" id="toc-impulse-response-of-inflation-to-a-one-unit-increase-in-unemployment" class="nav-link" data-scroll-target="#impulse-response-of-inflation-to-a-one-unit-increase-in-unemployment">Impulse Response of Inflation to a One-Unit Increase in Unemployment</a></li>
+  <li><a href="#what-is-the-implied-long-run-effect-of-unemployment-on-inflation" id="toc-what-is-the-implied-long-run-effect-of-unemployment-on-inflation" class="nav-link" data-scroll-target="#what-is-the-implied-long-run-effect-of-unemployment-on-inflation">what is the implied long-run effect of unemployment on inflation?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -683,7 +726,7 @@ y_t = \Phi(L)^{-1}\alpha + \Psi(L) x_t + \Phi(L)^{-1}u_t,
 <hr>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section"></h3>
-<div id="1e5b14ec" class="cell" data-message="false" data-execution_count="1">
+<div id="109af724" class="cell" data-message="false" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -703,7 +746,7 @@ y_t = \Phi(L)^{-1}\alpha + \Psi(L) x_t + \Phi(L)^{-1}u_t,
 </section>
 <section id="section-1" class="level3">
 <h3 class="anchored" data-anchor-id="section-1"></h3>
-<div id="3ce745cf" class="cell" data-message="false" data-execution_count="2">
+<div id="6c84d540" class="cell" data-message="false" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ----------------------------</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Construct lags explicitly</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ----------------------------</span></span>
@@ -745,7 +788,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 </section>
 <section id="impulse-response-of-inflation-to-a-one-unit-increase-in-unemployment" class="level3">
 <h3 class="anchored" data-anchor-id="impulse-response-of-inflation-to-a-one-unit-increase-in-unemployment">Impulse Response of Inflation to a One-Unit Increase in Unemployment</h3>
-<div id="6f1ff7f8" class="cell" data-message="false" data-execution_count="3">
+<div id="16a0f9f2" class="cell" data-message="false" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -760,7 +803,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 <h3 class="anchored" data-anchor-id="what-is-the-implied-long-run-effect-of-unemployment-on-inflation">what is the implied long-run effect of unemployment on inflation?</h3>
 <p><br></p>
 <div class="fragment">
-<div id="a5743c02" class="cell" data-execution_count="5">
+<div id="7d89cec9" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 5.84444176340136e-05
 </div>
