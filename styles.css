@@ -1,0 +1,10 @@
+/* Site-wide custom styles */
+
+/* Section headings styled to match subtitle */
+h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #6c757d;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}

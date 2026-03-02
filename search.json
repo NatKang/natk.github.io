@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Download CV (PDF)"
+  },
+  {
+    "objectID": "teaching/time-series-analysis.html",
+    "href": "teaching/time-series-analysis.html",
+    "title": "Time Series Analysis (WISE)",
+    "section": "",
+    "text": "Introduction to Time Series\nLinear Time Series Models\nEstimation and Inference\nNonstationary Time Series Models\nRegression with Time Series Data\nCointegration and Error Correction Models\nVector Autoregressions\nStructural VARs and Identification"
+  },
+  {
+    "objectID": "teaching/time-series-analysis.html#lecture-notes",
+    "href": "teaching/time-series-analysis.html#lecture-notes",
+    "title": "Time Series Analysis (WISE)",
+    "section": "",
+    "text": "Introduction to Time Series\nLinear Time Series Models\nEstimation and Inference\nNonstationary Time Series Models\nRegression with Time Series Data\nCointegration and Error Correction Models\nVector Autoregressions\nStructural VARs and Identification"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Natasha Kang",
+    "section": "",
+    "text": "Assistant Professor, Wang Yanan Institute for Studies in Economics, Xiamen University\nResearch interests: time series econometrics and macroeconomics.\n\nnatk@xmu.edu.cn · ORCID · Google Scholar"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Modeling Long Cycles (with Vadim Marmer) Journal of Econometrics, 2024  [WP]"
+  },
+  {
+    "objectID": "research.html#publications",
+    "href": "research.html#publications",
+    "title": "Research",
+    "section": "",
+    "text": "Modeling Long Cycles (with Vadim Marmer) Journal of Econometrics, 2024  [WP]"
+  },
+  {
+    "objectID": "research.html#working-papers",
+    "href": "research.html#working-papers",
+    "title": "Research",
+    "section": "Working papers",
+    "text": "Working papers\n\nA Framework for Common Long Cycles (with James A. Duffy, Vadim Marmer and Jerome R. Simons).\nUnknown Group Structures in Econometric Models (with Joshua Catalano, Vadim Marmer, Paul Schrimpf)."
+  },
+  {
+    "objectID": "teaching/econometrics-chow.html",
+    "href": "teaching/econometrics-chow.html",
+    "title": "Econometrics (Chow)",
+    "section": "",
+    "text": "Causality"
+  },
+  {
+    "objectID": "teaching/econometrics-chow.html#lecture-notes",
+    "href": "teaching/econometrics-chow.html#lecture-notes",
+    "title": "Econometrics (Chow)",
+    "section": "",
+    "text": "Causality"
+  },
+  {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Time Series Analysis (WISE)\nEconometrics (Chow)"
+  },
+  {
+    "objectID": "teaching/index.html#undergraduate-courses",
+    "href": "teaching/index.html#undergraduate-courses",
+    "title": "Teaching",
+    "section": "",
+    "text": "Time Series Analysis (WISE)\nEconometrics (Chow)"
+  }
+]
