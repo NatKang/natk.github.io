@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Natasha Kang"
+  navbar:
+    left:
+      - text: "Research"
+        href: research.qmd
+      - text: "Teaching"
+        href: teaching/index.qmd
+      - text: "CV"
+        href: cv.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
